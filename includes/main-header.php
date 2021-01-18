@@ -1,5 +1,4 @@
 <?php 
-
  if(isset($_Get['action'])){
 		if(!empty($_SESSION['cart'])){
 		foreach($_POST['quantity'] as $key => $val){
@@ -38,7 +37,7 @@
                             <div class="nav-outer">
                                 <ul class="nav navbar-nav">
                                     <li class=" dropdown yamm-fw ">
-                                        <a href="index.php" data-hover="dropdown" id="menu-link" class="dropdown-toggle">Home</a>
+                                        <a href="index.php" data-hover="dropdown" id="menu-link" class="nav-links dropdown-toggle">Home</a>
                                     </li>
                                     <li class=" dropdown yamm-fw">
                                         <a href="index.php" data-hover="dropdown" class="dropdown-toggle">About Us</a>

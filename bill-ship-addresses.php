@@ -1,41 +1,42 @@
 <?php
 session_start();
-error_reporting(0);
+//error_reporting(0);
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)
     {   
-header('location:login.php');
+header('location:.php');
 }
 else{
+	// code for billing address updation
 	if(isset($_POST['update']))
 	{
-		$name=$_POST['name'];
-		$query=mysqli_query($con,"update users set name='$name', where id='".$_SESSION['id']."'");
+		$baddress=$_POST['billingaddress'];
+		$bstate=$_POST['bilingstate'];
+		$bcity=$_POST['billingcity'];
+		$bpincode=$_POST['billingpincode'];
+		$query=mysqli_query($con,"update users set billingAddress='$baddress',billingState='$bstate',billingCity='$bcity',billingPincode='$bpincode' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Your info has been updated');</script>";
+echo "<script>alert('Billing Address has been updated');</script>";
 		}
 	}
 
 
-date_default_timezone_set('Asia/Kolkata');// change according timezone
-$currentTime = date( 'd-m-Y h:i:s A', time () );
+// code for Shipping address updation
+	if(isset($_POST['shipupdate']))
+	{
+		$saddress=$_POST['shippingaddress'];
+		$sstate=$_POST['shippingstate'];
+		$scity=$_POST['shippingcity'];
+		$spincode=$_POST['shippingpincode'];
+		$query=mysqli_query($con,"update users set shippingAddress='$saddress',shippingState='$sstate',shippingCity='$scity',shippingPincode='$spincode' where id='".$_SESSION['id']."'");
+		if($query)
+		{
+echo "<script>alert('Shipping Address has been updated');</script>";
+		}
+	}
 
 
-if(isset($_POST['submit']))
-{
-$sql=mysqli_query($con,"SELECT password FROM  users where password='".md5($_POST['cpass'])."' && id='".$_SESSION['id']."'");
-$num=mysqli_fetch_array($sql);
-if($num>0)
-{
- $con=mysqli_query($con,"update students set password='".md5($_POST['newpass'])."', updationDate='$currentTime' where id='".$_SESSION['id']."'");
-echo "<script>alert('Password Changed Successfully !!');</script>";
-}
-else
-{
-	echo "<script>alert('Current Password not match !!');</script>";
-}
-}
 
 ?>
 <!DOCTYPE html>
@@ -74,43 +75,37 @@ else
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <script type="text/javascript">
-    function valid() {
-        if (document.chngpwd.cpass.value == "") {
-            alert("Current Password Filed is Empty !!");
-            document.chngpwd.cpass.focus();
-            return false;
-        } else if (document.chngpwd.newpass.value == "") {
-            alert("New Password Filed is Empty !!");
-            document.chngpwd.newpass.focus();
-            return false;
-        } else if (document.chngpwd.cnfpass.value == "") {
-            alert("Confirm Password Filed is Empty !!");
-            document.chngpwd.cnfpass.focus();
-            return false;
-        } else if (document.chngpwd.newpass.value != document.chngpwd.cnfpass.value) {
-            alert("Password and Confirm Password Field do not match  !!");
-            document.chngpwd.cnfpass.focus();
-            return false;
-        }
-        return true;
-    }
-    </script>
 
 </head>
 
 <body class="cnt-home">
     <header class="header-style-1">
+
+        <!-- ============================================== TOP MENU ============================================== -->
         <?php include('includes/top-header.php');?>
+        <!-- ============================================== TOP MENU : END ============================================== -->
         <?php include('includes/main-header.php');?>
+        <!-- ============================================== NAVBAR ============================================== -->
+        <?php include('includes/menu-bar.php');?>
+        <!-- ============================================== NAVBAR : END ============================================== -->
+
     </header>
+    <!-- ============================================== HEADER : END ============================================== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <ul class="list-inline list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li class='active'>Checkout</li>
+                </ul>
+            </div><!-- /.breadcrumb-inner -->
+        </div><!-- /.container -->
+    </div><!-- /.breadcrumb -->
 
     <div class="body-content outer-top-bd">
         <div class="container">
             <div class="checkout-box inner-bottom-sm">
                 <div class="row">
-					<div class="col-md-2">
-					</div>	
                     <div class="col-md-8">
                         <div class="panel-group checkout-steps" id="accordion">
                             <!-- checkout-step-01  -->
@@ -120,7 +115,7 @@ else
                                 <div class="panel-heading">
                                     <h4 class="unicase-checkout-title">
                                         <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
-                                            <span>1</span>My Profile
+                                            <span>1</span>Billing Address
                                         </a>
                                     </h4>
                                 </div>
@@ -131,7 +126,6 @@ else
                                     <!-- panel-body  -->
                                     <div class="panel-body">
                                         <div class="row">
-                                            <h4>Personal info</h4>
                                             <div class="col-md-12 col-sm-12 already-registered-login">
 
                                                 <?php
@@ -142,29 +136,53 @@ while($row=mysqli_fetch_array($query))
 
                                                 <form class="register-form" role="form" method="post">
                                                     <div class="form-group">
-                                                        <label class="info-title" for="name">Name<span>*</span></label>
+                                                        <label class="info-title" for="Billing Address">Billing
+                                                            Address<span>*</span></label>
+                                                        <textarea class="form-control unicase-form-control text-input"
+                                                            name="billingaddress"
+                                                            required="required"><?php echo $row['billingAddress'];?></textarea>
+                                                    </div>
+
+
+
+                                                    <div class="form-group">
+                                                        <label class="info-title" for="Billing State ">Billing State
+                                                            <span>*</span></label>
                                                         <input type="text"
                                                             class="form-control unicase-form-control text-input"
-                                                            value="<?php echo $row['name'];?>" id="name" name="name"
-                                                            required="required">
+                                                            id="bilingstate" name="bilingstate"
+                                                            value="<?php echo $row['billingState'];?>" required>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="info-title" for="exampleInputEmail1">Email Address
+                                                        <label class="info-title" for="Billing City">Billing City
                                                             <span>*</span></label>
-                                                        <input type="email"
+                                                        <input type="text"
                                                             class="form-control unicase-form-control text-input"
-                                                            id="exampleInputEmail1" value="<?php echo $row['email'];?>"
-                                                            readonly>
+                                                            id="billingcity" name="billingcity" required="required"
+                                                            value="<?php echo $row['billingCity'];?>">
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label class="info-title" for="Billing Pincode">Billing Pincode
+                                                            <span>*</span></label>
+                                                        <input type="text"
+                                                            class="form-control unicase-form-control text-input"
+                                                            id="billingpincode" name="billingpincode"
+                                                            required="required"
+                                                            value="<?php echo $row['billingPincode'];?>">
+                                                    </div>
+
+
                                                     <button type="submit" name="update"
                                                         class="btn-upper btn btn-primary checkout-page-button">Update</button>
                                                 </form>
                                                 <?php } ?>
                                             </div>
+                                            <!-- already-registered-login -->
+
                                         </div>
                                     </div>
-									<div class="col-md-2">
-									</div>	
+                                    <!-- panel-body  -->
+
                                 </div><!-- row -->
                             </div>
                             <!-- checkout-step-01  -->
@@ -174,47 +192,69 @@ while($row=mysqli_fetch_array($query))
                                     <h4 class="unicase-checkout-title">
                                         <a data-toggle="collapse" class="collapsed" data-parent="#accordion"
                                             href="#collapseTwo">
-                                            <span>2</span>Change Password
+                                            <span>2</span>Shipping Address
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse">
                                     <div class="panel-body">
 
-                                        <form class="register-form" role="form" method="post" name="chngpwd"
-                                            onSubmit="return valid();">
+                                        <?php
+$query=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
+while($row=mysqli_fetch_array($query))
+{
+?>
+
+                                        <form class="register-form" role="form" method="post">
                                             <div class="form-group">
-                                                <label class="info-title" for="Current Password">Current
-                                                    Password<span>*</span></label>
-                                                <input type="password"
-                                                    class="form-control unicase-form-control text-input" id="cpass"
-                                                    name="cpass" required="required">
+                                                <label class="info-title" for="Shipping Address">Shipping
+                                                    Address<span>*</span></label>
+                                                <textarea class="form-control unicase-form-control text-input" " name="
+                                                    shippingaddress"
+                                                    required="required"><?php echo $row['shippingAddress'];?></textarea>
                                             </div>
 
 
 
                                             <div class="form-group">
-                                                <label class="info-title" for="New Password">New Password
+                                                <label class="info-title" for="Billing State ">Shipping State
                                                     <span>*</span></label>
-                                                <input type="password"
-                                                    class="form-control unicase-form-control text-input" id="newpass"
-                                                    name="newpass">
+                                                <input type="text" class="form-control unicase-form-control text-input"
+                                                    id="shippingstate" name="shippingstate"
+                                                    value="<?php echo $row['shippingState'];?>" required>
                                             </div>
                                             <div class="form-group">
-                                                <label class="info-title" for="Confirm Password">Confirm Password
+                                                <label class="info-title" for="Billing City">Shipping City
                                                     <span>*</span></label>
-                                                <input type="password"
-                                                    class="form-control unicase-form-control text-input" id="cnfpass"
-                                                    name="cnfpass" required="required">
+                                                <input type="text" class="form-control unicase-form-control text-input"
+                                                    id="shippingcity" name="shippingcity" required="required"
+                                                    value="<?php echo $row['shippingCity'];?>">
                                             </div>
-                                            <button type="submit" name="submit"
-                                                class="btn-upper btn btn-primary checkout-page-button">Change </button>
+                                            <div class="form-group">
+                                                <label class="info-title" for="Billing Pincode">Shipping Pincode
+                                                    <span>*</span></label>
+                                                <input type="text" class="form-control unicase-form-control text-input"
+                                                    id="shippingpincode" name="shippingpincode" required="required"
+                                                    value="<?php echo $row['shippingPincode'];?>">
+                                            </div>
+
+
+                                            <button type="submit" name="shipupdate"
+                                                class="btn-upper btn btn-primary checkout-page-button">Update</button>
                                         </form>
+                                        <?php } ?>
+
+
+
+
                                     </div>
                                 </div>
                             </div>
+                            <!-- checkout-step-02  -->
+
                         </div><!-- /.checkout-steps -->
                     </div>
+                    <?php include('includes/myaccount-sidebar.php');?>
                 </div><!-- /.row -->
             </div><!-- /.checkout-box -->
             <?php include('includes/brands-slider.php');?>

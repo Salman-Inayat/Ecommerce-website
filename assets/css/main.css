@@ -40,6 +40,13 @@
   display: inline-block;
   vertical-align: top;
 }
+
+
+.nav-links:hover{
+  border-bottom: 1px solid rgb(52, 177, 41);
+  background-color: transparent;
+}
+
 ul {
   list-style: none;
 }

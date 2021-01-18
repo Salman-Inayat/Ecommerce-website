@@ -90,7 +90,7 @@
                                         </span>
                                     </div>
                                     <div class="media-body">
-                                        <span><a href="#">atecmart@gmail.com</a></span>
+                                        <span><a href="#" style="color: white">atecmart@gmail.com</a></span>
                                     </div>
                                 </li>
 

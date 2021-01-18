@@ -15,7 +15,7 @@
                     <div class="nav-outer">
                         <ul class="nav navbar-nav">
                             <li class=" dropdown yamm-fw">
-                                <a href="index.php" data-hover="dropdown" class="dropdown-toggle">Home</a>
+                                <a href="index.php" data-hover="dropdown" class="dropdown-toggle nav-links">Home</a>
                             </li>
                             <li class=" dropdown yamm-fw">
                                 <a href="index.php" data-hover="dropdown" class="dropdown-toggle">About Us Us</a>

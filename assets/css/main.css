@@ -1468,13 +1468,13 @@ a {
 .sidebar .side-menu .head {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
-  border-radius: 0px;
+  border-radius: 2px;
   color: #FFFFFF;
   font-size: 18px;
   font-family: 'FjallaOneRegular';
   padding: 15px 17px;
   text-transform: uppercase;
-  background: #333333;
+  background: #666;
 }
 .sidebar .side-menu .head .icon {
   margin-right: 20px;
@@ -3555,7 +3555,7 @@ a {
 .single-product .product-tabs .nav.nav-tabs.nav-tab-cell > li.active > a {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
-  border-radius: 0px;
+  border-radius: 5px;
   color: #fff;
 }
 .single-product .product-tabs .nav.nav-tabs.nav-tab-cell > li.active > a:before {

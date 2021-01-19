@@ -121,17 +121,11 @@ while($row=mysqli_fetch_array($sql))
                 </div><!-- /.sidebar -->
                 <?php 
 $ret=mysqli_query($con,"select * from products where id='$pid'");
-while($row=mysqli_fetch_array($ret))
-{
-
-?>
-
-
+while($row=mysqli_fetch_array($ret)){?>
                 <div class='col-md-9'>
                     <div class="row  wow fadeInUp">
                         <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
                             <div class="product-item-holder size-big single-product-gallery small-gallery">
-
                                 <div id="owl-single-product">
                                     <div class="single-product-gallery-item" id="slide1">
                                         <a data-lightbox="image-1"
@@ -142,7 +136,7 @@ while($row=mysqli_fetch_array($ret))
                                                 width="370" height="350" />
                                         </a>
                                     </div>
-                                    <div class="single-product-gallery-item" id="slide1">
+                                    <!-- <div class="single-product-gallery-item" id="slide1">
                                         <a data-lightbox="image-1"
                                             data-title="<?php echo htmlentities($row['productName']);?>"
                                             href="<?php echo htmlentities($row['productImage1']);?>">
@@ -166,12 +160,11 @@ while($row=mysqli_fetch_array($ret))
                                             <img class="img-responsive" alt="" src="assets/images/blank.gif"
                                                 data-echo="<?php echo htmlentities($row['productImage3']);?>" />
                                         </a>
-                                    </div>
+                                    </div> -->
                                 </div>
 
-
+<!-- 
                                 <div class="single-product-gallery-thumbs gallery-thumbs">
-
                                     <div id="owl-single-product-thumbnails">
                                         <div class="item">
                                             <a class="horizontal-thumb active" data-target="#owl-single-product"
@@ -190,7 +183,6 @@ while($row=mysqli_fetch_array($ret))
                                             </a>
                                         </div>
                                         <div class="item">
-
                                             <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="3"
                                                 href="#slide3">
                                                 <img class="img-responsive" width="85" alt=""
@@ -200,7 +192,7 @@ while($row=mysqli_fetch_array($ret))
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class='col-sm-6 col-md-7 product-info-block'>
@@ -292,9 +284,6 @@ $num=mysqli_num_rows($rt);
                                             </div>
                                         </div>
 
-
-
-
                                         <div class="col-sm-6">
                                             <div class="favorite-button m-t-10">
                                                 <a class="btn btn-primary" data-toggle="tooltip" data-placement="right"
@@ -306,15 +295,8 @@ $num=mysqli_num_rows($rt);
                                                 </a>
                                             </div>
                                         </div>
-
-                                    </div><!-- /.row -->
-                                </div><!-- /.price-container -->
-
-
-
-
-
-
+                                    </div>
+                                </div>
                                 <div class="quantity-container info-container">
                                     <div class="row">
                                         <div class="col-sm-7">
@@ -360,7 +342,6 @@ $num=mysqli_num_rows($rt);
                                 </ul><!-- /.nav-tabs #product-tabs -->
                             </div>
                             <div class="col-sm-9">
-
                                 <div class="tab-content">
                                     <div id="description" class="tab-pane in active">
                                         <div class="product-tab">
@@ -395,8 +376,8 @@ while($rw=mysqli_fetch_array($qry))
                                     <div class="image">
                                         <a href="product-details.php?pid=<?php echo htmlentities($rw['id']);?>"><img
                                                 src="assets/images/blank.gif"
-                                                data-echo="<?php echo htmlentities($rw['productImage1']);?>"
-                                                width="150" height="240" alt=""></a>
+                                                data-echo="<?php echo htmlentities($rw['productImage1']);?>" width="150"
+                                                height="240" alt=""></a>
                                     </div><!-- /.image -->
 
 

@@ -1,4 +1,4 @@
-<div class="side-menu animate-dropdown outer-bottom-xs">
+<div class="side-menu animate-dropdown outer-bottom-sm">
     <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Categories</div>
     <nav class="yamm megamenu-horizontal" role="navigation">
         <ul class="nav">

@@ -98,14 +98,10 @@ header('location:my-wishlist.php');
                         <div class="side-menu animate-dropdown outer-bottom-xs">
                             <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categories</div>
                             <nav class="yamm megamenu-horizontal" role="navigation">
-
                                 <ul class="nav">
                                     <li class="dropdown menu-item">
                                         <?php $sql=mysqli_query($con,"select id,subcategory  from subcategory");
-
-while($row=mysqli_fetch_array($sql))
-{
-    ?>
+while($row=mysqli_fetch_array($sql)){?>
                                         <a href="sub-category.php?scid=<?php echo $row['id'];?>"
                                             class="dropdown-toggle"><i class="icon fa fa-desktop fa-fw"></i>
                                             <?php echo $row['subcategory'];?></a>
@@ -143,36 +139,10 @@ while($row=mysqli_fetch_array($sql))
                                     <?php } ?>
                                 </div><!-- /.sidebar-widget-body -->
                             </div><!-- /.sidebar-widget -->
-
-
-
-
-                            <!-- ============================================== COLOR: END ============================================== -->
-
                         </div><!-- /.sidebar-filter -->
                     </div><!-- /.sidebar-module-container -->
                 </div><!-- /.sidebar -->
                 <div class='col-md-9'>
-                    <!-- ========================================== SECTION – HERO ========================================= -->
-
-                    <div id="category" class="category-carousel hidden-xs">
-                        <div class="item">
-                            <div class="image">
-                                <img src="assets/images/banners/cat-banner-3.jpg" alt="" class="img-responsive">
-                            </div>
-                            <div class="container-fluid">
-                                <div class="caption vertical-top text-left">
-                                    <div class="big-text">
-                                        <br />
-                                    </div>
-
-
-
-                                </div><!-- /.caption -->
-                            </div><!-- /.container-fluid -->
-                        </div>
-                    </div>
-
                     <div class="search-result-container">
                         <div id="myTabContent" class="tab-content">
                             <div class="tab-pane active " id="grid-container">

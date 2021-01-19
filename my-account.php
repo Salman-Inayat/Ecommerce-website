@@ -13,7 +13,7 @@ else{
 		$query=mysqli_query($con,"update users set name='$name', where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Your info has been updated');</script>";
+            echo "<script>alert('Your info has been updated');</script>";
 		}
 	}
 
@@ -108,126 +108,108 @@ else
         <div class="container">
             <div class="checkout-box inner-bottom-sm">
                 <div class="row">
-					<div class="col-md-2">
-					</div>	
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="panel-group checkout-steps" id="accordion">
-                            <!-- checkout-step-01  -->
-                            <div class="panel panel-default checkout-step-01">
-
-                                <!-- panel-heading -->
-                                <div class="panel-heading">
-                                    <h4 class="unicase-checkout-title">
-                                        <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
-                                            <span>1</span>My Profile
-                                        </a>
-                                    </h4>
-                                </div>
-                                <!-- panel-heading -->
-
-                                <div id="collapseOne" class="panel-collapse collapse in">
-
-                                    <!-- panel-body  -->
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <h4>Personal info</h4>
-                                            <div class="col-md-12 col-sm-12 already-registered-login">
-
-                                                <?php
+                            <div class="col-md-6 col-sm-12">
+                                <div class="panel panel-default checkout-step-01">
+                                    <div class="panel-heading">
+                                        <h4 class="unicase-checkout-title">
+                                            <a data-toggle="collapse" class="" data-parent="#accordion"
+                                                href="#collapseOne">
+                                                <span>1</span>My Profile
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <h4>Personal info</h4>
+                                                <div class="col-md-12 col-sm-12 already-registered-login">
+                                                    <?php
 $query=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
-while($row=mysqli_fetch_array($query))
-{
-?>
-
-                                                <form class="register-form" role="form" method="post">
-                                                    <div class="form-group">
-                                                        <label class="info-title" for="name">Name<span>*</span></label>
-                                                        <input type="text"
-                                                            class="form-control unicase-form-control text-input"
-                                                            value="<?php echo $row['name'];?>" id="name" name="name"
-                                                            required="required">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="info-title" for="exampleInputEmail1">Email Address
-                                                            <span>*</span></label>
-                                                        <input type="email"
-                                                            class="form-control unicase-form-control text-input"
-                                                            id="exampleInputEmail1" value="<?php echo $row['email'];?>"
-                                                            readonly>
-                                                    </div>
-                                                    <button type="submit" name="update"
-                                                        class="btn-upper btn btn-primary checkout-page-button">Update</button>
-                                                </form>
-                                                <?php } ?>
+while($row=mysqli_fetch_array($query)){?>
+                                                    <form class="register-form" role="form" method="post">
+                                                        <div class="form-group">
+                                                            <label class="info-title"
+                                                                for="name">Name<span>*</span></label>
+                                                            <input type="text"
+                                                                class="form-control unicase-form-control text-input"
+                                                                value="<?php echo $row['name'];?>" id="name" name="name"
+                                                                required="required">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="info-title" for="exampleInputEmail1">Email
+                                                                Address
+                                                                <span>*</span></label>
+                                                            <input type="email"
+                                                                class="form-control unicase-form-control text-input"
+                                                                id="exampleInputEmail1"
+                                                                value="<?php echo $row['email'];?>" readonly>
+                                                        </div>
+                                                        <button type="submit" name="update"
+                                                            class="btn-upper btn btn-primary checkout-page-button">Update</button>
+                                                    </form>
+                                                    <?php } ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-									<div class="col-md-2">
-									</div>	
-                                </div><!-- row -->
-                            </div>
-                            <!-- checkout-step-01  -->
-                            <!-- checkout-step-02  -->
-                            <div class="panel panel-default checkout-step-02">
-                                <div class="panel-heading">
-                                    <h4 class="unicase-checkout-title">
-                                        <a data-toggle="collapse" class="collapsed" data-parent="#accordion"
-                                            href="#collapseTwo">
-                                            <span>2</span>Change Password
-                                        </a>
-                                    </h4>
                                 </div>
-                                <div id="collapseTwo" class="panel-collapse collapse">
-                                    <div class="panel-body">
-
-                                        <form class="register-form" role="form" method="post" name="chngpwd"
-                                            onSubmit="return valid();">
-                                            <div class="form-group">
-                                                <label class="info-title" for="Current Password">Current
-                                                    Password<span>*</span></label>
-                                                <input type="password"
-                                                    class="form-control unicase-form-control text-input" id="cpass"
-                                                    name="cpass" required="required">
-                                            </div>
-
-
-
-                                            <div class="form-group">
-                                                <label class="info-title" for="New Password">New Password
-                                                    <span>*</span></label>
-                                                <input type="password"
-                                                    class="form-control unicase-form-control text-input" id="newpass"
-                                                    name="newpass">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="info-title" for="Confirm Password">Confirm Password
-                                                    <span>*</span></label>
-                                                <input type="password"
-                                                    class="form-control unicase-form-control text-input" id="cnfpass"
-                                                    name="cnfpass" required="required">
-                                            </div>
-                                            <button type="submit" name="submit"
-                                                class="btn-upper btn btn-primary checkout-page-button">Change </button>
-                                        </form>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="panel panel-default checkout-step-02">
+                                    <div class="panel-heading">
+                                        <h4 class="unicase-checkout-title">
+                                            <a data-toggle="collapse" class="" 
+                                                href="#collapseTwo">
+                                                <span>2</span>Change Password
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <form class="register-form" role="form" method="post" name="chngpwd"
+                                                onSubmit="return valid();">
+                                                <div class="form-group">
+                                                    <label class="info-title" for="Current Password">Current
+                                                        Password<span>*</span></label>
+                                                    <input type="password"
+                                                        class="form-control unicase-form-control text-input" id="cpass"
+                                                        name="cpass" required="required">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="info-title" for="New Password">New Password
+                                                        <span>*</span></label>
+                                                    <input type="password"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="newpass" name="newpass">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="info-title" for="Confirm Password">Confirm Password
+                                                        <span>*</span></label>
+                                                    <input type="password"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="cnfpass" name="cnfpass" required="required">
+                                                </div>
+                                                <button type="submit" name="submit"
+                                                    class="btn-upper btn btn-primary checkout-page-button">Change
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- /.checkout-steps -->
+                        </div>
                     </div>
-                </div><!-- /.row -->
-            </div><!-- /.checkout-box -->
-            <?php include('includes/brands-slider.php');?>
-
+                </div>
+            </div>
         </div>
     </div>
     <?php include('includes/footer.php');?>
     <script src="assets/js/jquery-1.11.1.min.js"></script>
-
     <script src="assets/js/bootstrap.min.js"></script>
-
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-
     <script src="assets/js/echo.min.js"></script>
     <script src="assets/js/jquery.easing-1.3.min.js"></script>
     <script src="assets/js/bootstrap-slider.min.js"></script>
@@ -236,26 +218,6 @@ while($row=mysqli_fetch_array($query))
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
-
-    <!-- For demo purposes – can be removed on production -->
-
-    <script src="switchstylesheet/switchstylesheet.js"></script>
-
-    <script>
-    $(document).ready(function() {
-        $(".changecolor").switchstylesheet({
-            seperator: "color"
-        });
-        $('.show-theme-options').click(function() {
-            $(this).parent().toggleClass('open');
-            return false;
-        });
-    });
-
-    $(window).bind("load", function() {
-        $('.show-theme-options').delay(2000).trigger('click');
-    });
-    </script>
 </body>
 
 </html>

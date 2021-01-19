@@ -136,17 +136,6 @@ echo "<script>alert('Shipping Address has been updated');</script>";
         <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
-    <div class="breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-inner">
-                <ul class="list-inline list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li class='active'>Shopping Cart</li>
-                </ul>
-            </div><!-- /.breadcrumb-inner -->
-        </div><!-- /.container -->
-    </div><!-- /.breadcrumb -->
-
     <div class="body-content outer-top-xs">
         <div class="container">
             <div class="row inner-bottom-sm">
@@ -203,10 +192,7 @@ if(!empty($_SESSION['cart'])){
 				$totalprice += $subtotal;
 				$_SESSION['qnty']=$totalqunty+=$quantity;
 
-				array_push($pdtid,$row['id']);
-//print_r($_SESSION['pid'])=$pdtid;exit;
-	?>
-
+				array_push($pdtid,$row['id']);?>
                                         <tr>
                                             <td class="romove-item"><input type="checkbox" name="remove_code[]"
                                                     value="<?php echo htmlentities($row['id']);?>" /></td>
@@ -224,7 +210,7 @@ $_SESSION['sid']=$pd;
 						 ?></a></h4>
                                                 <div class="row">
                                                     <div class="col-sm-4">
-                                                    <?php include('includes/rating.php');?>
+                                                        <?php include('includes/rating.php');?>
                                                     </div>
                                                     <div class="col-sm-8">
                                                         <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");
@@ -237,7 +223,6 @@ $num=mysqli_num_rows($rt);
                                                         <?php } ?>
                                                     </div>
                                                 </div><!-- /.row -->
-
                                             </td>
                                             <td class="cart-product-quantity">
                                                 <div class="quant-input">
@@ -264,25 +249,19 @@ $num=mysqli_num_rows($rt);
                                                     class="cart-grand-total-price"><?php echo ($_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge']); ?>.00</span>
                                             </td>
                                         </tr>
-
                                         <?php } }
-$_SESSION['pid']=$pdtid;
-				?>
-
+$_SESSION['pid']=$pdtid;?>
                                     </tbody><!-- /tbody -->
                                 </table><!-- /table -->
-
                         </div>
                     </div><!-- /.shopping-cart-table -->
-                        <?php } else {
-echo "Your shopping Cart is empty";
-		}?>
-                   
+                    <?php } else {
+echo "Your shopping Cart is empty";}?>
                 </div>
             </div>
             </form>
-            <?php echo include('includes/brands-slider.php');?>
         </div>
+    </div>
     </div>
     <?php include('includes/footer.php');?>
 
@@ -301,27 +280,6 @@ echo "Your shopping Cart is empty";
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
-
-    <!-- For demo purposes – can be removed on production -->
-
-    <script src="switchstylesheet/switchstylesheet.js"></script>
-
-    <script>
-    $(document).ready(function() {
-        $(".changecolor").switchstylesheet({
-            seperator: "color"
-        });
-        $('.show-theme-options').click(function() {
-            $(this).parent().toggleClass('open');
-            return false;
-        });
-    });
-
-    $(window).bind("load", function() {
-        $('.show-theme-options').delay(2000).trigger('click');
-    });
-    </script>
-    <!-- For demo purposes – can be removed on production : End -->
 </body>
 
 </html>

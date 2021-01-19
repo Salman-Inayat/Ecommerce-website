@@ -62,9 +62,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <link rel="stylesheet" href="assets/css/owl.transitions.css">
     <link href="assets/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/rateit.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="assets/css/config.css">
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -133,63 +131,7 @@ while($row=mysqli_fetch_array($ret)){?>
                                                 width="370" height="350" />
                                         </a>
                                     </div>
-                                    <!-- <div class="single-product-gallery-item" id="slide1">
-                                        <a data-lightbox="image-1"
-                                            data-title="<?php echo htmlentities($row['productName']);?>"
-                                            href="<?php echo htmlentities($row['productImage1']);?>">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                data-echo="<?php echo htmlentities($row['productImage1']);?>"
-                                                width="370" height="350" />
-                                        </a>
-                                    </div>
-
-                                    <div class="single-product-gallery-item" id="slide2">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                            href="<?php echo htmlentities($row['productImage2']);?>">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                data-echo="<?php echo htmlentities($row['productImage2']);?>" />
-                                        </a>
-                                    </div>
-
-                                    <div class="single-product-gallery-item" id="slide3">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                            href="<?php echo htmlentities($row['productImage3']);?>">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                data-echo="<?php echo htmlentities($row['productImage3']);?>" />
-                                        </a>
-                                    </div> -->
                                 </div>
-
-                                <!-- 
-                                <div class="single-product-gallery-thumbs gallery-thumbs">
-                                    <div id="owl-single-product-thumbnails">
-                                        <div class="item">
-                                            <a class="horizontal-thumb active" data-target="#owl-single-product"
-                                                data-slide="1" href="#slide1">
-                                                <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                    data-echo="<?php echo htmlentities($row['productImage1']);?>" />
-                                            </a>
-                                        </div>
-
-                                        <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2"
-                                                href="#slide2">
-                                                <img class="img-responsive" width="85" alt=""
-                                                    src="assets/images/blank.gif"
-                                                    data-echo="<?php echo htmlentities($row['productImage2']);?>" />
-                                            </a>
-                                        </div>
-                                        <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="3"
-                                                href="#slide3">
-                                                <img class="img-responsive" width="85" alt=""
-                                                    src="assets/images/blank.gif"
-                                                    data-echo="<?php echo htmlentities($row['productImage3']);?>"
-                                                    height="200" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <div class='col-sm-6 col-md-7 product-info-block'>
@@ -201,7 +143,7 @@ $num=mysqli_num_rows($rt);
                                 <div class="rating-reviews m-t-20">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <div class="rating rateit-small"></div>
+                                        <?php include('includes/rating.php');?>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="reviews">
@@ -377,7 +319,7 @@ while($rw=mysqli_fetch_array($qry))
                                     <h3 class="name"><a
                                             href="product-details.php?pid=<?php echo htmlentities($rw['id']);?>"><?php echo htmlentities($rw['productName']);?></a>
                                     </h3>
-                                    <div class="rating rateit-small"></div>
+                                    <?php include('includes/rating.php');?>
                                     <div class="description"></div>
 
                                     <div class="product-price">

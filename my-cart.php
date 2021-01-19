@@ -105,7 +105,6 @@ echo "<script>alert('Shipping Address has been updated');</script>";
     <!--<link rel="stylesheet" href="assets/css/owl.theme.css">-->
     <link href="assets/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/rateit.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
     <!-- Demo Purpose Only. Should be removed in production -->
@@ -225,7 +224,7 @@ $_SESSION['sid']=$pd;
 						 ?></a></h4>
                                                 <div class="row">
                                                     <div class="col-sm-4">
-                                                        <div class="rating rateit-small"></div>
+                                                    <?php include('includes/rating.php');?>
                                                     </div>
                                                     <div class="col-sm-8">
                                                         <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");

@@ -61,7 +61,6 @@ header('location:my-wishlist.php');
     <!--<link rel="stylesheet" href="assets/css/owl.theme.css">-->
     <link href="assets/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/rateit.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
     <!-- Demo Purpose Only. Should be removed in production -->
@@ -169,7 +168,7 @@ while ($row=mysqli_fetch_array($ret)) {?>
                                                         <h3 class="name"><a
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a>
                                                         </h3>
-                                                        <div class="rating rateit-small"></div>
+                                                        <?php include('includes/rating.php');?>
                                                         <div class="description"></div>
 
                                                         <div class="product-price">

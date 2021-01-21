@@ -63,8 +63,7 @@ header('location:my-wishlist.php');
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <!-- Demo Purpose Only. Should be removed in production -->
-    <link rel="stylesheet" href="assets/css/config.css">
+   
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <!-- Demo Purpose Only. Should be removed in production : END -->
@@ -161,8 +160,7 @@ while ($row=mysqli_fetch_array($ret))
                                                         <div class="image">
                                                             <a
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img
-                                                                    src="assets/images/blank.gif"
-                                                                    data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                    src="<?php echo htmlentities($row['productImage1']);?>"
                                                                     alt="" width="200" height="300"></a>
                                                         </div><!-- /.image -->
                                                     </div><!-- /.product-image -->

@@ -47,8 +47,6 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <!-- Demo Purpose Only. Should be removed in production -->
-    <link rel="stylesheet" href="assets/css/config.css">
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -96,7 +94,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
                                                                     <img src="<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300" alt=""></a>
                                                             </div>
                                                         </div>
@@ -156,7 +153,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
                                                                     <img src="<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300" alt=""></a>
                                                             </div>
                                                         </div>
@@ -213,7 +209,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
                                                                     <img src="<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300" alt=""></a>
                                                             </div>
                                                         </div>
@@ -275,7 +270,6 @@ while ($row=mysqli_fetch_array($ret)) {?>
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img
                                                                         src="<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300"></a>
                                                             </div><!-- /.image -->
                                                         </div><!-- /.product-image -->
@@ -336,7 +330,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img
                                                                         src="<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="250" height="250"></a>
                                                             </div><!-- /.image -->
                                                         </div><!-- /.product-image -->
@@ -405,7 +398,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <a href="<?php echo htmlentities($row['productImage1']);?>"
                                                                     data-lightbox="image-1"
                                                                     data-title="<?php echo htmlentities($row['productName']);?>">
-                                                                    <img data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="170" height="174" alt="">
                                                                     <div class="zoom-overlay"></div>
                                                                 </a>

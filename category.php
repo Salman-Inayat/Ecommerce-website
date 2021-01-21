@@ -63,8 +63,6 @@ header('location:my-wishlist.php');
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <!-- Demo Purpose Only. Should be removed in production -->
-    <link rel="stylesheet" href="assets/css/config.css">
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <!-- Demo Purpose Only. Should be removed in production : END -->
@@ -157,8 +155,7 @@ while ($row=mysqli_fetch_array($ret)) {?>
                                                         <div class="image">
                                                             <a
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img
-                                                                    src="assets/images/blank.gif"
-                                                                    data-echo="<?php echo htmlentities($row['productImage1']);?>"
+                                                                    src="<?php echo htmlentities($row['productImage1']);?>"
                                                                     alt="" width="200" height="300"></a>
                                                         </div><!-- /.image -->
                                                     </div><!-- /.product-image -->
@@ -185,12 +182,7 @@ while ($row=mysqli_fetch_array($ret)) {?>
                                                         <div class="action">
                                                             <ul class="list-unstyled">
                                                                 <li class="add-cart-button btn-group">
-
                                                                     <?php if($row['productAvailability']=='In Stock'){?>
-                                                                    <button class="btn btn-primary icon"
-                                                                        data-toggle="dropdown" type="button">
-                                                                        <i class="fa fa-shopping-cart"></i>
-                                                                    </button>
                                                                     <a
                                                                         href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
                                                                         <button class="btn btn-primary"

@@ -119,12 +119,11 @@ while($row=mysqli_fetch_array($ret)){?>
                             <div class="product-item-holder size-big single-product-gallery small-gallery">
                                 <div id="owl-single-product">
                                     <div class="single-product-gallery-item" id="slide1">
-                                        <a 
-                                            data-title="<?php echo htmlentities($row['productName']);?>"
+                                        <a data-title="<?php echo htmlentities($row['productName']);?>"
                                             href="<?php echo htmlentities($row['productImage1']);?>">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                data-echo="<?php echo htmlentities($row['productImage1']);?>"
-                                                width="370" height="350" />
+                                            <img class="img-responsive" alt=""
+                                                src="<?php echo htmlentities($row['productImage1']);?>" width="370"
+                                                height="350" />
                                         </a>
                                     </div>
                                 </div>
@@ -138,8 +137,8 @@ $num=mysqli_num_rows($rt);
 {?>
                                 <div class="rating-reviews m-t-20">
                                     <div class="row">
-                                        <div class="col-sm-3">
-                                        <?php include('includes/rating.php');?>
+                                        <div class="col-sm-4">
+                                            <?php include('includes/rating.php');?>
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="reviews">
@@ -151,12 +150,12 @@ $num=mysqli_num_rows($rt);
                                 <?php } ?>
                                 <div class="stock-container info-container m-t-10">
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-4">
                                             <div class="stock-box">
                                                 <span class="label">Availability :</span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-8">
                                             <div class="stock-box">
                                                 <span
                                                     class="value"><?php echo htmlentities($row['productAvailability']);?></span>
@@ -167,12 +166,12 @@ $num=mysqli_num_rows($rt);
 
                                 <div class="stock-container info-container m-t-10">
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-4">
                                             <div class="stock-box">
                                                 <span class="label">Product Brand :</span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-8">
                                             <div class="stock-box">
                                                 <span
                                                     class="value"><?php echo htmlentities($row['productCompany']);?></span>
@@ -184,12 +183,12 @@ $num=mysqli_num_rows($rt);
 
                                 <div class="stock-container info-container m-t-10">
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-4">
                                             <div class="stock-box">
                                                 <span class="label">Shipping Charge :</span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-8">
                                             <div class="stock-box">
                                                 <span class="value"><?php if($row['shippingCharge']==0)
 											{
@@ -245,37 +244,16 @@ $num=mysqli_num_rows($rt);
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 
-                                <div class="product-social-link m-t-20 text-right">
-                                    <span class="social-label">Share :</span>
-                                    <div class="social-icons">
-                                        <ul class="list-inline">
-                                            <li><a class="fa fa-facebook" href="http://facebook.com/transvelo"></a></li>
-                                            <li><a class="fa fa-twitter" href="#"></a></li>
-                                            <li><a class="fa fa-linkedin" href="#"></a></li>
-                                            <li><a class="fa fa-rss" href="#"></a></li>
-                                            <li><a class="fa fa-pinterest" href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
                     <div class="product-tabs inner-bottom-xs  wow fadeInUp">
                         <div class="row">
-                            <div class="col-sm-3">
-                                <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
-                                    <li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
-                                </ul><!-- /.nav-tabs #product-tabs -->
+                            <div class="col-md-5 col-sm-12">  
                             </div>
-                            <div class="col-sm-9">
-                                <div class="tab-content">
-                                    <div id="description" class="tab-pane in active">
-                                        <div class="product-tab">
-                                            <p class="text"><?php echo $row['productDescription'];?></p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-md-7 col-sm-12">
+                                <h3 style="border-bottom: 2px solid #666; width: 35%; margin-bottom: 30px">DESCRIPTION</h3>
+                                <p><?php echo $row['productDescription'];?></p>
                             </div>
                         </div>
                     </div>
@@ -302,15 +280,10 @@ while($rw=mysqli_fetch_array($qry))
                                 <div class="product-image">
                                     <div class="image">
                                         <a href="product-details.php?pid=<?php echo htmlentities($rw['id']);?>"><img
-                                                src="assets/images/blank.gif"
-                                                data-echo="<?php echo htmlentities($rw['productImage1']);?>" width="150"
+                                                src="<?php echo htmlentities($rw['productImage1']);?>" width="150"
                                                 height="240" alt=""></a>
                                     </div><!-- /.image -->
-
-
                                 </div><!-- /.product-image -->
-
-
                                 <div class="product-info text-left">
                                     <h3 class="name"><a
                                             href="product-details.php?pid=<?php echo htmlentities($rw['id']);?>"><?php echo htmlentities($rw['productName']);?></a>

@@ -9,10 +9,9 @@ html, body{
 }
 
 body{
-	background:#7fcae8 url('../img/background.jpg') no-repeat;
 	background-size:cover;
 	background-attachment:fixed;
-	font: 300 16px 'Roboto', Helvetica, Arial, sans-serif;
+	font: 300 16px 'Roboto', sans-serif;
 	line-height:21px;
 	color:#596067;
 }
@@ -116,10 +115,6 @@ h6{
 a{
 	color:#1f2228;
 	transition:color 0.1s, background 0.2s;
-	-webkit-transition:color 0.1s, background 0.2s;
-	-moz-transition:color 0.1s, background 0.2s;
-	-ms-transition:color 0.1s, background 0.2s;
-	-o-transition:color 0.1s, background 0.2s;
 }
 
 a:hover{

@@ -85,8 +85,6 @@ exit();
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <!-- Demo Purpose Only. Should be removed in production -->
-    <link rel="stylesheet" href="assets/css/config.css">
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <!-- Demo Purpose Only. Should be removed in production : END -->

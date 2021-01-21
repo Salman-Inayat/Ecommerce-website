@@ -77,34 +77,7 @@ a:active,
 a:focus {
   text-decoration: none;
 }
-img[src="assets/images/blank.gif"] {
-  background: url("../images/ajax.gif") no-repeat scroll center center #ffffff;
-}
-@font-face {
-  font-family: 'FjallaOneRegular';
-  src: url('../fonts/fjalla/fjallaone-regular.eot');
-  src: url('../fonts/fjalla/fjallaone-regular.eot') format('embedded-opentype'), url('../fonts/fjalla/fjallaone-regular.woff2') format('woff2'), url('../fonts/fjalla/fjallaone-regular.woff') format('woff'), url('../fonts/fjalla/fjallaone-regular.ttf') format('truetype'), url('../fonts/fjalla/fjallaone-regular.svg#FjallaOneRegular') format('svg');
-}
-@font-face {
-  font-family: 'BebasNeueBold';
-  src: url('../fonts/bebas/bebasneuebold.eot');
-  src: url('../fonts/bebas/bebasneuebold.eot') format('embedded-opentype'), url('../fonts/bebas/bebasneuebold.woff2') format('woff2'), url('../fonts/bebas/bebasneuebold.woff') format('woff'), url('../fonts/bebas/bebasneuebold.ttf') format('truetype'), url('../fonts/bebas/bebasneuebold.svg#BebasNeueBold') format('svg');
-}
-@font-face {
-  font-family: 'BebasNeueRegular';
-  src: url('../fonts/bebas/bebasneueregular.eot');
-  src: url('../fonts/bebas/bebasneueregular.eot') format('embedded-opentype'), url('../fonts/bebas/bebasneueregular.woff2') format('woff2'), url('../fonts/bebas/bebasneueregular.woff') format('woff'), url('../fonts/bebas/bebasneueregular.ttf') format('truetype'), url('../fonts/bebas/bebasneueregular.svg#BebasNeueRegular') format('svg');
-}
-@font-face {
-  font-family: 'PacificoRegular';
-  src: url('../fonts/pacifico/pacifico.eot');
-  src: url('../fonts/pacifico/pacifico.eot') format('embedded-opentype'), url('../fonts/pacifico/pacifico.woff2') format('woff2'), url('../fonts/pacifico/pacifico.woff') format('woff'), url('../fonts/pacifico/pacifico.ttf') format('truetype'), url('../fonts/pacifico/pacifico.svg#PacificoRegular') format('svg');
-}
-@font-face {
-  font-family: 'LatoBold';
-  src: url('../fonts/lato/lato-bold.eot');
-  src: url('../fonts/lato/lato-bold.eot') format('embedded-opentype'), url('../fonts/lato/lato-bold.woff2') format('woff2'), url('../fonts/lato/lato-bold.woff') format('woff'), url('../fonts/lato/lato-bold.ttf') format('truetype'), url('../fonts/lato/lato-bold.svg#LatoBold') format('svg');
-}
+
 .btn-upper {
   text-transform: uppercase;
 }
@@ -348,7 +321,7 @@ img[src="assets/images/blank.gif"] {
 }
 .section-title {
   font-size: 20px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   border-bottom: 1px solid #e3e3e3;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -1119,7 +1092,7 @@ a {
   background: rgba(0, 0, 0, 0);
 }
 .main-header .top-search-holder .search-area .categories-filter .dropdown-menu li.menu-header {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   line-height: 30px;
 }
 .main-header .top-search-holder .search-area {
@@ -1177,7 +1150,7 @@ a {
 }
 .top-cart-row .dropdown-cart .lnk-cart .items-cart-inner .total-price-basket {
   padding: 13px 15px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-transform: uppercase;
   float: left;
 }
@@ -1220,7 +1193,7 @@ a {
 }
 .top-cart-row .dropdown-cart .dropdown-menu .cart-item.product-summary .name {
   font-size: 13px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   margin-top: 0px;
 }
 .top-cart-row .dropdown-cart .dropdown-menu .cart-item.product-summary .name a {
@@ -1241,7 +1214,7 @@ a {
 }
 .top-cart-row .dropdown-cart .dropdown-menu .cart-total .text {
   font-size: 13px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   color: #666666;
   margin-right: 10px;
 }
@@ -1265,7 +1238,7 @@ a {
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav > li > a {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: #FFFFFF;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 20px;
   line-height: 20px;
   padding: 21px 29px;
@@ -1324,9 +1297,7 @@ a {
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav > li .menu-label.hot-menu:before {
   border-color: #ff7878 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }
-.header-style-2 {
-  /*margin-bottom:10px;*/
-}
+
 .header-style-2 .header-nav {
   background: rgba(0, 0, 0, 0) !important;
 }
@@ -1391,7 +1362,7 @@ a {
   line-height: 27px;
   color: #555;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   margin-top: 0px;
 }
 .yamm .dropdown-menu li {
@@ -1471,7 +1442,7 @@ a {
   border-radius: 2px;
   color: #FFFFFF;
   font-size: 18px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   padding: 15px 17px;
   text-transform: uppercase;
   background: #666;
@@ -1576,7 +1547,7 @@ a {
 }
 .sidebar .sidebar-module-container .sidebar-widget .widget-header .widget-title {
   font-size: 14px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   margin: 0px;
 }
 .sidebar .sidebar-module-container .sidebar-widget .sidebar-widget-body .accordion .accordion-group .accordion-heading .accordion-toggle {
@@ -1719,7 +1690,7 @@ a {
   font-size: 60px;
   line-height: 125px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   color: #fff;
   text-shadow: 1px 1px 3px #cfcfcf;
 }
@@ -2149,7 +2120,7 @@ a {
   font-size: 35px;
   line-height: 50px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   padding: 5px 25px;
   background: #bbbbbb;
   color: #fff;
@@ -2284,7 +2255,7 @@ a {
   font-size: 15px;
   line-height: 50px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-shadow: 2px 2px #c3c3c3;
   color: #fff ;
   padding-left: 0px;
@@ -2293,7 +2264,7 @@ a {
   font-size: 45px;
   line-height: 50px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-shadow: 2px 2px #c3c3c3;
   color: #000;
 }
@@ -2445,7 +2416,7 @@ a {
   margin-bottom: 0px;
   margin-top: 5px;
   font-size: 20px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-transform: uppercase;
 }
 .scroll-tabs .nav-tab-line {
@@ -2495,7 +2466,7 @@ a {
 }
 .product .product-info .name {
   font-size: 16px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .product .product-info .name a {
   color: #555;
@@ -2783,11 +2754,11 @@ a {
 }
 .wide-banners.homepage-banner h4 {
   font-size: 30px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .wide-banners.homepage-banner h3 {
   font-size: 35px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .new-banner {
   margin-top: 30px;
@@ -2802,7 +2773,7 @@ a {
   padding: 13px 23px 13px 16px;
   line-height: 24px;
   font-size: 30px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .new-banner .cnt-strip .strip h5 {
   font-size: 16px;
@@ -2834,19 +2805,19 @@ a {
 }
 .wide-banner-4 .cnt-strip .strip h1 {
   font-size: 50px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .wide-banner-4 .cnt-strip .strip h2 {
   font-size: 40px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .wide-banner-4 .cnt-strip .strip h3 {
   font-size: 30px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .wide-banner-4 .cnt-strip .strip h4 {
   font-size: 20px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .wide-banner-4 .cnt-strip .strip p {
   font-size: 23px;
@@ -2855,7 +2826,7 @@ a {
 }
 .blog-slider-container .blog-slider .blog-post-info .name {
   font-size: 16px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .blog-slider-container .blog-slider .blog-post-info .name a {
   color: #555;
@@ -2911,7 +2882,7 @@ a {
 .footer .module-heading {
   font-size: 16px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   color: #555555;
 }
 .footer .contact-timing .table tbody tr {
@@ -2924,7 +2895,7 @@ a {
   padding: 0px !important;
 }
 .footer .contact-timing .contact-number {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .footer .contact-information .media .media-body a {
   color: #666666;
@@ -2936,7 +2907,7 @@ a {
 .footer .footer-bottom .module-heading {
   font-size: 16px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   color: #898989;
 }
 .footer .footer-bottom .module-body ul li {
@@ -3044,7 +3015,7 @@ a {
 }
 .hot-deals .product-info .name {
   font-size: 18px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .hot-deals .product-info .name a {
   color: #555;
@@ -3160,7 +3131,7 @@ a {
   font-size: 150px;
   line-height: 145px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   color: #fe5252;
 }
 .category-carousel .item .caption .excerpt {
@@ -3388,7 +3359,7 @@ a {
 .single-product .product-info .name {
   font-size: 20px;
   line-height: 18px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   color: #555;
   margin-top: 5px;
 }
@@ -3397,7 +3368,7 @@ a {
 }
 .single-product .product-info .stock-container .stock-box .label {
   font-size: 16px;
-  font-family: 'FjallaOneRegular';
+  font-family: "Roboto";
   line-height: 18px;
   text-transform: uppercase;
   color: #666666;
@@ -3437,7 +3408,7 @@ a {
 }
 .single-product .product-info .quantity-container .label {
   font-size: 16px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   line-height: 40px;
   text-transform: uppercase;
   color: #666666;
@@ -3488,7 +3459,7 @@ a {
 }
 .single-product .product-info .product-social-link .social-label {
   font-size: 15px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   line-height: 20px;
   text-transform: uppercase;
 }
@@ -3524,7 +3495,7 @@ a {
   display: block;
   padding: 12px 28px;
   font-size: 18px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   line-height: 28px;
   text-transform: uppercase;
   position: relative;
@@ -3761,7 +3732,7 @@ a {
   -moz-border-radius: 0px;
   border-radius: 0px;
   color: #666666;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 20px;
   line-height: 30px;
   padding-bottom: 4px;
@@ -3798,7 +3769,7 @@ a {
   line-height: 20px;
   margin: 0 0 10px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .product-tabs .tab-content .tab-pane .product-reviews .reviews .review {
   margin-bottom: 20px;
@@ -3835,7 +3806,7 @@ a {
   line-height: 20px;
   margin: 0 0 20px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .product-tabs .tab-content .tab-pane .product-add-review .review-table .table thead th {
   font-weight: normal;
@@ -3874,7 +3845,7 @@ a {
   line-height: 20px;
   margin: 0 0 20px;
   text-transform: uppercase;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .product-tabs .tab-content .tab-pane .product-tag .form-group label {
   font-weight: 300;
@@ -3899,7 +3870,7 @@ a {
 .furniture-container .product .btn-primary {
   font-size: 15px;
   line-height: 30px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   background: #cbc9c9;
   text-transform: uppercase;
   border: none;
@@ -3976,7 +3947,7 @@ a {
 }
 .homepage-container .product .product-info .name {
   font-size: 18px !important;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .homepage-container .product .product-info .name a {
   color: #555;
@@ -4035,7 +4006,7 @@ a {
 .homepage-container .btn-primary {
   font-size: 15px;
   line-height: 30px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   background: rgba(0, 0, 0, 0);
   text-transform: uppercase;
   border: 2px solid #f2f2f2;
@@ -4337,7 +4308,7 @@ a {
 }
 /* Large devices (large desktops, 1200px and up) */
 .blog-page .blog-post h1 {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 25px;
   text-transform: uppercase;
 }
@@ -4386,7 +4357,7 @@ a {
   color: #888888;
 }
 .blog-page .sidebar .sidebar-module-container .sidebar-widget .blog-post h4 {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -4457,7 +4428,7 @@ a {
   margin-left: 2px;
 }
 .blog-page .side-bar-blog .widget .categories .side-bar-title h3 {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 18px;
   text-transform: uppercase;
   color: #555;
@@ -4516,7 +4487,7 @@ a {
 .blog-page .blog-post-author-details h4 {
   display: inline-block;
   font-size: 15px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-transform: uppercase;
   color: #555;
   margin: 0px;
@@ -4530,7 +4501,7 @@ a {
 .blog-page .blog-review .title-review-comments {
   font-size: 16px;
   color: #555;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   margin-bottom: 40px;
   text-transform: uppercase;
 }
@@ -4601,7 +4572,7 @@ a {
 .contact-page .contact-title h4 {
   font-size: 16px;
   color: #555;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-transform: uppercase;
   display: inline-block;
 }
@@ -4662,7 +4633,7 @@ a {
   padding: 15px 20px;
 }
 .checkout-box .checkout-steps .checkout-subtitle {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 16px;
   text-transform: uppercase;
   color: #434343;
@@ -4700,7 +4671,7 @@ a {
 }
 .checkout-box .checkout-steps .panel .panel-heading,
 .checkout-box .checkout-progress-sidebar .panel .panel-heading {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 20px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -4783,7 +4754,7 @@ a {
 }
 .shopping-cart .shopping-cart-table table tbody tr .cart-product-name-info h4 {
   margin-top: 0px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -4798,7 +4769,7 @@ a {
   margin-top: 10px;
 }
 .shopping-cart .shopping-cart-table table tbody tr .cart-product-name-info .cart-product-info span {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 12px;
   color: #666666;
   text-transform: uppercase;
@@ -4816,7 +4787,7 @@ a {
 .shopping-cart .shopping-cart-table .table > thead > tr > th {
   text-align: center;
   padding: 16px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 15px;
 }
 .shopping-cart .shopping-cart-table .shopping-cart-btn span {
@@ -4824,7 +4795,7 @@ a {
   display: block;
 }
 .shopping-cart .estimate-ship-tax table thead tr th .estimate-title {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 19px;
   color: #555;
   text-transform: uppercase;
@@ -4889,7 +4860,7 @@ a {
 .shopping-cart .shopping-cart-table table tbody tr .cart-product-sub-total span,
 .shopping-cart .shopping-cart-table table tbody tr .cart-product-grand-total span {
   display: block;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 20px;
   color: #555;
   text-transform: uppercase;
@@ -4912,7 +4883,7 @@ a {
 }
 .shopping-cart .cart-shopping-total table thead tr th .cart-sub-total,
 .shopping-cart .cart-shopping-total table thead tr th .cart-grand-total {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 22px;
 }
 .shopping-cart-table table tbody tr td .quant-input {
@@ -4958,7 +4929,7 @@ a {
   z-index: 1;
 }
 .product-comparison .page-title {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 30px;
   text-transform: uppercase;
   color: #666666;
@@ -5014,7 +4985,7 @@ a {
   color: #ff6666;
 }
 .body-content .x-page .x-text h1 {
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   font-size: 200px;
 }
 .body-content .x-page .x-text p {
@@ -5053,13 +5024,13 @@ a {
   text-transform: uppercase;
   color: #555;
   text-align: center;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
 }
 .body-content .terms-conditions-page .terms-conditions h3 {
   font-size: 24px;
   text-transform: uppercase;
   color: #555;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   margin-bottom: 30px;
 }
 .body-content .terms-conditions-page .terms-conditions ol {
@@ -5103,7 +5074,7 @@ a {
 .body-content .my-wishlist-page .my-wishlist table > thead > tr > th {
   text-align: center;
   font-size: 30px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   text-transform: uppercase;
   border: none;
   font-weight: 400;
@@ -5113,7 +5084,7 @@ a {
 }
 .body-content .my-wishlist-page .my-wishlist table tbody .product-name {
   font-size: 20px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   padding-bottom: 6px;
 }
 .body-content .my-wishlist-page .my-wishlist table tbody .product-name a {
@@ -5159,7 +5130,7 @@ a {
 .body-content .sign-in-page .sign-in h4,
 .body-content .sign-in-page .create-new-account h4 {
   font-size: 24px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   padding-bottom: 14px;
   border-bottom: 1px solid #ddd;
   text-transform: uppercase;
@@ -5199,7 +5170,7 @@ a {
 }
 .body-content .sign-in-page .create-new-account > span {
   font-size: 20px;
-  font-family: 'FjallaOneRegular';
+  font-family: 'Roboto';
   padding-bottom: 14px;
   text-transform: uppercase;
   display: inline-block;

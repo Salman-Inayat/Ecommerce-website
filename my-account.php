@@ -64,8 +64,6 @@ else
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <!-- Demo Purpose Only. Should be removed in production -->
-    <link rel="stylesheet" href="assets/css/config.css">
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">

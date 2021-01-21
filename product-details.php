@@ -86,7 +86,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 
 
                         <!-- ==============================================CATEGORY============================================== -->
-                        <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
+                        <!-- <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
                             <h3 class="section-title">Category</h3>
                             <div class="sidebar-widget-body m-t-10">
                                 <div class="accordion">
@@ -107,7 +107,8 @@ while($row=mysqli_fetch_array($sql))
                                     <?php } ?>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <?php include('includes/side-menu.php');?>
                     </div>
                 </div>
                 <?php 

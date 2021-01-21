@@ -92,6 +92,7 @@ header('location:my-wishlist.php');
             <div class='row outer-bottom-sm'>
                 <div class='col-md-3 sidebar'>
                     <!-- ================================== TOP NAVIGATION ================================== -->
+                    <?php include('includes/side-menu.php');?>
                     <div class="side-menu animate-dropdown outer-bottom-xs">
                         <div class="side-menu animate-dropdown outer-bottom-xs">
                             <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categories</div>
@@ -109,37 +110,8 @@ while($row=mysqli_fetch_array($sql)){?>
                                 </ul>
                             </nav>
                         </div>
-                    </div><!-- /.side-menu -->
-                    <!-- ================================== TOP NAVIGATION : END ================================== -->
-                    <div class="sidebar-module-container">
-                        <h3 class="section-title">shop by</h3>
-                        <div class="sidebar-filter">
-                            <!-- ============================================== SIDEBAR CATEGORY ============================================== -->
-                            <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
-                                <div class="widget-header m-t-20">
-                                    <h4 class="widget-title">Category</h4>
-                                </div>
-                                <div class="sidebar-widget-body m-t-10">
-                                    <?php $sql=mysqli_query($con,"select id,categoryName  from category");
-while($row=mysqli_fetch_array($sql))
-{
-    ?>
-                                    <div class="accordion">
-                                        <div class="accordion-group">
-                                            <div class="accordion-heading">
-                                                <a href="category.php?cid=<?php echo $row['id'];?>"
-                                                    class="accordion-toggle collapsed">
-                                                    <?php echo $row['categoryName'];?>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
-                                </div><!-- /.sidebar-widget-body -->
-                            </div><!-- /.sidebar-widget -->
-                        </div><!-- /.sidebar-filter -->
-                    </div><!-- /.sidebar-module-container -->
-                </div><!-- /.sidebar -->
+                    </div>
+                </div>
                 <div class='col-md-9'>
                     <div class="search-result-container">
                         <div id="myTabContent" class="tab-content">

@@ -152,11 +152,7 @@ if(!empty($_SESSION['cart'])){
                                             <th class="cart-romove item">Remove</th>
                                             <th class="cart-description item">Image</th>
                                             <th class="cart-product-name item">Product Name</th>
-
-                                            <th class="cart-qty item">Quantity</th>
                                             <th class="cart-sub-total item">Price Per unit</th>
-                                            <th class="cart-sub-total item">Shipping Charge</th>
-                                            <th class="cart-total last-item">Grandtotal</th>
                                         </tr>
                                     </thead><!-- /thead -->
                                     <tfoot>
@@ -187,11 +183,7 @@ if(!empty($_SESSION['cart'])){
 			$totalqunty=0;
 			if(!empty($query)){
 			while($row = mysqli_fetch_array($query)){
-				$quantity=$_SESSION['cart'][$row['id']]['quantity'];
 				$subtotal= $_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge'];
-				$totalprice += $subtotal;
-				$_SESSION['qnty']=$totalqunty+=$quantity;
-
 				array_push($pdtid,$row['id']);?>
                                         <tr>
                                             <td class="romove-item"><input type="checkbox" name="remove_code[]"
@@ -214,9 +206,7 @@ $_SESSION['sid']=$pd;
                                                     </div>
                                                     <div class="col-sm-8">
                                                         <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");
-$num=mysqli_num_rows($rt);
-{
-?>
+$num=mysqli_num_rows($rt);{?>
                                                         <div class="reviews">
                                                             ( <?php echo htmlentities($num);?> Reviews )
                                                         </div>
@@ -224,29 +214,8 @@ $num=mysqli_num_rows($rt);
                                                     </div>
                                                 </div><!-- /.row -->
                                             </td>
-                                            <td class="cart-product-quantity">
-                                                <div class="quant-input">
-                                                    <div class="arrows">
-                                                        <div class="arrow plus gradient"><span class="ir"><i
-                                                                    class="icon fa fa-sort-asc"></i></span></div>
-                                                        <div class="arrow minus gradient"><span class="ir"><i
-                                                                    class="icon fa fa-sort-desc"></i></span></div>
-                                                    </div>
-                                                    <input type="text"
-                                                        value="<?php echo $_SESSION['cart'][$row['id']]['quantity']; ?>"
-                                                        name="quantity[<?php echo $row['id']; ?>]">
-
-                                                </div>
-                                            </td>
                                             <td class="cart-product-sub-total"><span
                                                     class="cart-sub-total-price"><?php echo "Rs"." ".$row['productPrice']; ?>.00</span>
-                                            </td>
-                                            <td class="cart-product-sub-total"><span
-                                                    class="cart-sub-total-price"><?php echo "Rs"." ".$row['shippingCharge']; ?>.00</span>
-                                            </td>
-
-                                            <td class="cart-product-grand-total"><span
-                                                    class="cart-grand-total-price"><?php echo ($_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge']); ?>.00</span>
                                             </td>
                                         </tr>
                                         <?php } }

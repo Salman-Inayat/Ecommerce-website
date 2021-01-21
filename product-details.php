@@ -108,12 +108,8 @@ while($row=mysqli_fetch_array($sql))
                                 </div>
                             </div>
                         </div>
-                        <!-- ============================================== CATEGORY : END ============================================== -->
-
-
-                        <!-- ============================================== COLOR: END ============================================== -->
                     </div>
-                </div><!-- /.sidebar -->
+                </div>
                 <?php 
 $ret=mysqli_query($con,"select * from products where id='$pid'");
 while($row=mysqli_fetch_array($ret)){?>
@@ -123,7 +119,7 @@ while($row=mysqli_fetch_array($ret)){?>
                             <div class="product-item-holder size-big single-product-gallery small-gallery">
                                 <div id="owl-single-product">
                                     <div class="single-product-gallery-item" id="slide1">
-                                        <a data-lightbox="image-1"
+                                        <a 
                                             data-title="<?php echo htmlentities($row['productName']);?>"
                                             href="<?php echo htmlentities($row['productImage1']);?>">
                                             <img class="img-responsive" alt="" src="assets/images/blank.gif"
@@ -377,34 +373,9 @@ while($rw=mysqli_fetch_array($qry))
     <script src="assets/js/jquery.easing-1.3.min.js"></script>
     <script src="assets/js/bootstrap-slider.min.js"></script>
     <script src="assets/js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
-
-    <!-- For demo purposes – can be removed on production -->
-
-    <script src="switchstylesheet/switchstylesheet.js"></script>
-
-    <script>
-    $(document).ready(function() {
-        $(".changecolor").switchstylesheet({
-            seperator: "color"
-        });
-        $('.show-theme-options').click(function() {
-            $(this).parent().toggleClass('open');
-            return false;
-        });
-    });
-
-    $(window).bind("load", function() {
-        $('.show-theme-options').delay(2000).trigger('click');
-    });
-    </script>
-    <!-- For demo purposes – can be removed on production : End -->
-
-
-
 </body>
 
 </html>

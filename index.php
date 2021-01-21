@@ -12,15 +12,12 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		if(mysqli_num_rows($query_p)!=0){
 			$row_p=mysqli_fetch_array($query_p);
 			$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['productPrice']);
-		
 		}else{
 			$message="Product ID is invalid";
 		}
 	}
 		echo "<script type='text/javascript'> document.location ='my-cart.php'; </script>";
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +63,6 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <header class="header-style-1">
         <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
-        <!-- <?php include('includes/menu-bar.php');?> -->
     </header>
     <div class="body-content outer-top-xs" id="top-banner-and-menu">
         <div class="container">
@@ -99,13 +95,11 @@ while ($row=mysqli_fetch_array($ret))
                                                             <div class="image">
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
-                                                                    <img src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                    <img src="<?php echo htmlentities($row['productImage1']);?>"
+                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300" alt=""></a>
                                                             </div>
                                                         </div>
-
-
                                                         <div class="product-info text-left">
                                                             <h3 class="name"><a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a>
@@ -161,8 +155,8 @@ while ($row=mysqli_fetch_array($ret))
                                                             <div class="image">
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
-                                                                    <img src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                    <img src="<?php echo htmlentities($row['productImage1']);?>"
+                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300" alt=""></a>
                                                             </div>
                                                         </div>
@@ -218,15 +212,11 @@ while ($row=mysqli_fetch_array($ret))
                                                             <div class="image">
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
-                                                                    <img src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                    <img src="<?php echo htmlentities($row['productImage1']);?>"
+                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300" alt=""></a>
                                                             </div>
-
-
                                                         </div>
-
-
                                                         <div class="product-info text-left">
                                                             <h3 class="name"><a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a>
@@ -239,9 +229,7 @@ while ($row=mysqli_fetch_array($ret))
                                                                 </span>
                                                                 <span
                                                                     class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
-
                                                             </div>
-
                                                         </div>
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action"><a
@@ -258,19 +246,14 @@ while ($row=mysqli_fetch_array($ret))
                                                         <div class="action" style="color:red">Out of Stock</div>
                                                         <?php } ?>
                                                     </div>
-
                                                 </div>
                                             </div>
                                             <?php } ?>
-
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                         <!-- ============================================== TABS ============================================== -->
                         <div class="sections prod-slider-small outer-top-small">
                             <div class="row">
@@ -282,12 +265,7 @@ while ($row=mysqli_fetch_array($ret))
 
                                             <?php
 $ret=mysqli_query($con,"select * from products where category=4 and subCategory=4");
-while ($row=mysqli_fetch_array($ret)) 
-{
-?>
-
-
-
+while ($row=mysqli_fetch_array($ret)) {?>
                                             <div class="item item-carousel">
                                                 <div class="products">
 
@@ -296,13 +274,11 @@ while ($row=mysqli_fetch_array($ret))
                                                             <div class="image">
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img
-                                                                        src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
-                                                                        data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                        src="<?php echo htmlentities($row['productImage1']);?>"
+                                                                        data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="180" height="300"></a>
                                                             </div><!-- /.image -->
                                                         </div><!-- /.product-image -->
-
-
                                                         <div class="product-info text-left">
                                                             <h3 class="name"><a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a>
@@ -317,7 +293,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <span
                                                                     class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
                                                             </div>
-
                                                         </div>
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action">
@@ -332,17 +307,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <i class="fa fa-heart"></i>
                                                             </a>
                                                         </div>
-                                                        <!-- <div class="col-sm-6">
-                                                            <div class="favorite-button m-t-10">
-                                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                                    data-placement="right" title="Wishlist"
-                                                                    href="product-details.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist">
-                                                                    <i class="fa fa-heart"></i>
-                                                                </a>
-
-                                                                </a>
-                                                            </div>
-                                                        </div> -->
                                                         <?php } else {?>
                                                         <div class="action" style="color:red">Out of Stock</div>
                                                         <?php } ?>
@@ -438,10 +402,10 @@ while ($row=mysqli_fetch_array($ret))
                                                     <div class="col col-xs-12">
                                                         <div class="product-image">
                                                             <div class="image">
-                                                                <a href="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                <a href="<?php echo htmlentities($row['productImage1']);?>"
                                                                     data-lightbox="image-1"
                                                                     data-title="<?php echo htmlentities($row['productName']);?>">
-                                                                    <img data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"
+                                                                    <img data-echo="<?php echo htmlentities($row['productImage1']);?>"
                                                                         width="170" height="174" alt="">
                                                                     <div class="zoom-overlay"></div>
                                                                 </a>

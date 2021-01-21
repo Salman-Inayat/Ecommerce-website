@@ -16,8 +16,6 @@ else{
             echo "<script>alert('Your info has been updated');</script>";
 		}
 	}
-
-
 date_default_timezone_set('Asia/Kolkata');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
@@ -112,18 +110,15 @@ else
                         <div class="panel-group checkout-steps" id="accordion">
                             <div class="col-md-6 col-sm-12">
                                 <div class="panel panel-default checkout-step-01">
-                                    <div class="panel-heading">
-                                        <h4 class="unicase-checkout-title">
-                                            <a data-toggle="collapse" class="" data-parent="#accordion"
-                                                href="#collapseOne">
-                                                <span>1</span>My Profile
-                                            </a>
+                                    <div style=" padding: 15px 0px 15px 40px; background-color: #666; letter-spacing: 1px; font-weight: 400;">
+                                        <h4 class="unicase-checkout-title"
+                                            style="color: white; text-transform: uppercase">
+                                            Change Username
                                         </h4>
                                     </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div >
                                         <div class="panel-body">
                                             <div class="row">
-                                                <h4>Personal info</h4>
                                                 <div class="col-md-12 col-sm-12 already-registered-login">
                                                     <?php
 $query=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
@@ -158,15 +153,13 @@ while($row=mysqli_fetch_array($query)){?>
                             </div>
                             <div class="col-md-6 col-sm-12">
                                 <div class="panel panel-default checkout-step-02">
-                                    <div class="panel-heading">
-                                        <h4 class="unicase-checkout-title">
-                                            <a data-toggle="collapse" class="" 
-                                                href="#collapseTwo">
-                                                <span>2</span>Change Password
-                                            </a>
+                                    <div style=" padding: 15px 0px 15px 40px; background-color: #666; letter-spacing: 1px; font-weight: 400;">
+                                        <h4 class="unicase-checkout-title"
+                                            style="color: white; text-transform: uppercase">
+                                            Change Password
                                         </h4>
                                     </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div>
                                         <div class="panel-body">
                                             <form class="register-form" role="form" method="post" name="chngpwd"
                                                 onSubmit="return valid();">

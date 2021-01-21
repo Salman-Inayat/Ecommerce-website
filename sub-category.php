@@ -94,10 +94,11 @@ header('location:my-wishlist.php');
                     <!-- ================================== TOP NAVIGATION ================================== -->
                     <!-- ================================== TOP NAVIGATION : END ================================== -->
                     <div class="sidebar-module-container">
-                        <h3 class="section-title">shop by</h3>
-                        <div class="sidebar-filter">
+                    <?php include('includes/side-menu.php');?>
+                    <?php include('includes/side-subcategory.php');?>
+                    <div class="sidebar-filter">
                             <!-- ============================================== SIDEBAR CATEGORY ============================================== -->
-                            <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
+                            <!-- <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
                                 <div class="widget-header m-t-20">
                                     <h4 class="widget-title">Category</h4>
                                 </div>
@@ -117,8 +118,8 @@ while($row=mysqli_fetch_array($sql))
                                         </div>
                                     </div>
                                     <?php } ?>
-                                </div><!-- /.sidebar-widget-body -->
-                            </div><!-- /.sidebar-widget -->
+                                </div>
+                            </div> -->
 
 
 

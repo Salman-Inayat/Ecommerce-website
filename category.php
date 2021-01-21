@@ -91,7 +91,9 @@ header('location:my-wishlist.php');
             <div class='row outer-bottom-sm'>
                 <div class='col-md-3 sidebar'>
                     <!-- ================================== TOP NAVIGATION ================================== -->
-                    <div class="side-menu animate-dropdown outer-bottom-xs">
+                    <?php include('includes/side-menu.php');?>
+                    <?php include('includes/side-subcategory.php');?>
+                    <!-- <div class="side-menu animate-dropdown outer-bottom-xs">
                         <div class="side-menu animate-dropdown outer-bottom-xs">
                             <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categories</div>
                             <nav class="yamm megamenu-horizontal" role="navigation">
@@ -100,7 +102,7 @@ header('location:my-wishlist.php');
                                         <?php $sql=mysqli_query($con,"select id,subcategory  from subcategory where categoryid='$cid'");
 while($row=mysqli_fetch_array($sql)){?>
                                         <a href="sub-category.php?scid=<?php echo $row['id'];?>"
-                                            class="dropdown-toggle"><i class="icon fa fa-desktop fa-fw"></i>
+                                            class="dropdown-toggle">
                                             <?php echo $row['subcategory'];?></a>
                                         <?php }?>
 
@@ -108,12 +110,11 @@ while($row=mysqli_fetch_array($sql)){?>
                                 </ul>
                             </nav>
                         </div>
-                    </div><!-- /.side-menu -->
+                    </div> -->
                     <!-- ================================== TOP NAVIGATION : END ================================== -->
-                    <div class="sidebar-module-container">
+                    <!-- <div class="sidebar-module-container">
                         <h3 class="section-title">shop by</h3>
                         <div class="sidebar-filter">
-                            <!-- ============================================== SIDEBAR CATEGORY ============================================== -->
                             <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
                                 <div class="widget-header m-t-20">
                                     <h4 class="widget-title">Category</h4>
@@ -132,11 +133,12 @@ while($row=mysqli_fetch_array($sql)){?>
                                         </div>
                                     </div>
                                     <?php } ?>
-                                </div><!-- /.sidebar-widget-body -->
+                                </div>
                             </div>
-                        </div><!-- /.sidebar-filter -->
-                    </div><!-- /.sidebar-module-container -->
-                </div><!-- /.sidebar -->
+                        </div>
+                    </div> -->
+                    
+                </div>
                 <div class='col-md-9'>
                     <div class="search-result-container">
                         <div id="myTabContent" class="tab-content">

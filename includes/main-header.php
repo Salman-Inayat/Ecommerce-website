@@ -25,27 +25,27 @@
                 <div class="yamm navbar" role="navigation" style="margin-top:5px">
                     <div class="navbar-header">
                         <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"
-                            class="navbar-toggle collapsed" type="button">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                            class="navbar-toggle collapsed"  type="button">
+                            <span class="sr-only" >Toggle navigation</span>
+                            <span class="icon-bar" style="background-color: white" ></span>
+                            <span class="icon-bar" style="background-color: white" ></span>
+                            <span class="icon-bar" style="background-color: white" ></span>
                         </button>
                     </div>
                     <div class="nav-bg-class">
                         <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                             <div class="nav-outer">
                                 <ul class="nav navbar-nav">
-                                    <li class=" dropdown yamm-fw ">
+                                    <li class=" dropdown  ">
                                         <a href="index.php" data-hover="dropdown" id="menu-link" class="nav-links dropdown-toggle">Home</a>
                                     </li>
-                                    <li class=" dropdown yamm-fw">
+                                    <li class=" dropdown ">
                                         <a href="index.php" data-hover="dropdown" class="dropdown-toggle">About Us</a>
                                     </li>                            
-                                    <li class=" dropdown yamm-fw">
+                                    <li class=" dropdown ">
                                         <a href="index.php" data-hover="dropdown" class="dropdown-toggle">Contact US</a>
                                     </li>                            
-                                    <li class=" dropdown yamm-fw">
+                                    <li class=" dropdown ">
                                         <a href="index.php" data-hover="dropdown" class="dropdown-toggle">Privacy Policy</a>
                                     </li>
                                 </ul>

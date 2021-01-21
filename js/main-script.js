@@ -5,12 +5,6 @@ function include(url){
 	document.write('<script src="'+ url + '" type="text/javascript"></script>'); 
 }
 
-
-include('twitter/jquery.tweet.js'); // Twitter widget */
-include('js/tinynav.min.js'); // Tiny nav
-
-
-
 $(document).ready(function(){
 	"use strict";
 	

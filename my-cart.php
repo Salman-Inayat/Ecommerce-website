@@ -107,7 +107,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-   
+
 
     <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
     <!-- Demo Purpose Only. Should be removed in production : END -->
@@ -179,7 +179,7 @@ if(!empty($_SESSION['cart'])){
 			$sql=substr($sql,0,-1) . ") ORDER BY id ASC";
 			$query = mysqli_query($con,$sql);
 			$totalprice=0;
-			$totalqunty=0;
+			// $totalqunty=0;
 			if(!empty($query)){
 			while($row = mysqli_fetch_array($query)){
 				$subtotal= $_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge'];
@@ -234,19 +234,9 @@ echo "Your shopping Cart is empty";}?>
     <?php include('includes/footer.php');?>
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
-
     <script src="assets/js/bootstrap.min.js"></script>
-
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-
-    <script src="assets/js/echo.min.js"></script>
-    <script src="assets/js/jquery.easing-1.3.min.js"></script>
-    <script src="assets/js/bootstrap-slider.min.js"></script>
-    <script src="assets/js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 

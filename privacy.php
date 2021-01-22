@@ -40,7 +40,7 @@ include('includes/config.php');
         <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
-    <div class='container '>
+    <div class='container' style="margin-top: 50px; margin-bottom: 50px">
         <div class="row">
             <div class="title">
                 <h2>Privacy Policy</h2>

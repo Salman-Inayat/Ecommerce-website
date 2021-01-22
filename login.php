@@ -142,7 +142,6 @@ exit();
                     <!-- Sign-in -->
                     <div class="col-md-6 col-sm-6 sign-in">
                         <h4 class="">sign in</h4>
-                        <p class="">Login to your account</p>
                         <form class="register-form outer-top-xs" method="post">
                             <span style="color:red;">
                                 <?php echo htmlentities($_SESSION['errmsg']); ?>
@@ -212,14 +211,7 @@ exit();
 
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-
-    <script src="assets/js/echo.min.js"></script>
-    <script src="assets/js/jquery.easing-1.3.min.js"></script>
     <script src="assets/js/bootstrap-slider.min.js"></script>
-    <script src="assets/js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
     <!-- For demo purposes – can be removed on production -->

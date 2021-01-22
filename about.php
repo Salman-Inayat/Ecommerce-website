@@ -23,8 +23,6 @@ include('includes/config.php');
 
     <!-- Customizable CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link href="assets/css/lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
     <!-- <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color"> -->
@@ -50,11 +48,12 @@ include('includes/config.php');
         text-transform: uppercase;
     }
     .aboutus_row
-    h4,
-    p,
-    .aboutus_button {
+    h4,.aboutus_button {
         margin: 20px;
         letter-spacing: 0.5px;
+    }
+    .about-para{
+        margin: 20px;
     }
 
 
@@ -71,9 +70,7 @@ include('includes/config.php');
             margin: 30px
         }
         .aboutus_row
-        h4,
-        p,
-        .aboutus_button {
+        h4,.aboutus_button {
             margin: 10px;
         }
     }
@@ -91,7 +88,7 @@ include('includes/config.php');
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat.</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                <p class="about-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
                     officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
@@ -111,11 +108,11 @@ include('includes/config.php');
             </div>
             <div class="col-sm-8">
                 <h2>Our Values</h2>
-                <p><strong>Mission: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                <p class="about-para"><strong>Mission: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat.</p>
-                <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                <p class="about-para"><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -132,7 +129,6 @@ include('includes/config.php');
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 

@@ -131,14 +131,14 @@ if(!empty($_SESSION['cart'])){
                                     </div>
                                 </div>
                             </div>
-                            <hr>
+                            <!-- <hr>
                             <div class="clearfix cart-total">
 
                                 <div class="clearfix"></div>
 
                                 <a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue
                                     Shopping</a>
-                            </div>
+                            </div> -->
                         </li>
                     </ul>
                 </div>

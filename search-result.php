@@ -62,27 +62,17 @@ header('location:my-wishlist.php');
     <link href="assets/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-
-   
-
-    <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
-    <!-- Demo Purpose Only. Should be removed in production : END -->
+    <!-- <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color"> -->
 
 
     <!-- Icons/Glyphs -->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-
 </head>
-
 <body class="cnt-home">
-
     <header class="header-style-1">
         <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
@@ -91,7 +81,6 @@ header('location:my-wishlist.php');
         <div class='container'>
             <div class='row outer-bottom-sm'>
                 <div class='col-md-3 sidebar'>
-                    <!-- ================================== TOP NAVIGATION ================================== -->
                     <?php include('includes/side-menu.php');?>
                     <div class="side-menu animate-dropdown outer-bottom-xs">
                         <div class="side-menu animate-dropdown outer-bottom-xs">
@@ -105,7 +94,6 @@ while($row=mysqli_fetch_array($sql)){?>
                                             class="dropdown-toggle"><i class="icon fa fa-desktop fa-fw"></i>
                                             <?php echo $row['subcategory'];?></a>
                                         <?php }?>
-
                                     </li>
                                 </ul>
                             </nav>

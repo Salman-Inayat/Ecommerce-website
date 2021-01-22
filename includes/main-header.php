@@ -40,13 +40,13 @@
                                         <a href="index.php" data-hover="dropdown" id="menu-link" class="nav-links dropdown-toggle">Home</a>
                                     </li>
                                     <li class=" dropdown ">
-                                        <a href="index.php" data-hover="dropdown" class="dropdown-toggle">About Us</a>
+                                        <a href="about.php" data-hover="dropdown" class="dropdown-toggle">About Us</a>
                                     </li>                            
                                     <li class=" dropdown ">
-                                        <a href="index.php" data-hover="dropdown" class="dropdown-toggle">Contact US</a>
+                                        <a href="contact.php" data-hover="dropdown" class="dropdown-toggle">Contact US</a>
                                     </li>                            
                                     <li class=" dropdown ">
-                                        <a href="index.php" data-hover="dropdown" class="dropdown-toggle">Privacy Policy</a>
+                                        <a href="privacy.php" data-hover="dropdown" class="dropdown-toggle">Privacy Policy</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>

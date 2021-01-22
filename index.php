@@ -39,7 +39,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 
     <!-- Customizable CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/green.css">
+    <!-- <link rel="stylesheet" href="assets/css/green.css"> -->
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.transitions.css">
     <link rel="stylesheet" href="assets/css/owl.theme.css">
@@ -47,7 +47,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
+    <!-- <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color"> -->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
@@ -396,7 +396,7 @@ while ($row=mysqli_fetch_array($ret))
                                                             <div class="image">
                                                                 <a href="<?php echo htmlentities($row['productImage1']);?>"
                                                                     data-lightbox="image-1"
-                                                                    data-title="<?php echo htmlentities($row['productName']);?>">
+                                                                    data-title="<?php echo htmlentities($row['productName']);?>"
                                                                         width="170" height="174" alt="">
                                                                     <div class="zoom-overlay"></div>
                                                                 </a>

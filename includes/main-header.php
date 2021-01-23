@@ -11,13 +11,20 @@
 		}
 	}
 ?>
-<div class="main-header" style="background-color: currentColor">
+
+<style>
+.nav-link:hover{
+    color: red;
+}
+</style>
+
+<div class="main-header" style="background-color: #f44336">
     <div class="container">
         <div class="row" >
-            <div class="col-xs-12 col-sm-12 col-md-3 logo-holder" style="margin-top: 0px">
+            <div class="col-xs-12 col-sm-12 col-md-3 logo-holder" style="margin-top: 0px; color: white">
                 <div class="logo">
                     <a href="index.php">
-                        <h2 style="margin-top: 15px">Atec Mart</h2>
+                        <h2 style="margin-top: 15px; color: white">Atec Mart</h2>
                     </a>
                 </div>
             </div>
@@ -35,18 +42,18 @@
                     <div class="nav-bg-class">
                         <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                             <div class="nav-outer">
-                                <ul class="nav navbar-nav">
+                                <ul class="nav navbar-nav" >
                                     <li class=" dropdown  ">
-                                        <a href="index.php" data-hover="dropdown" id="menu-link" class="nav-links dropdown-toggle">Home</a>
+                                        <a href="index.php" data-hover="dropdown" class="nav-links dropdown-toggle" style="color: white">Home</a>
                                     </li>
                                     <li class=" dropdown ">
-                                        <a href="about.php" data-hover="dropdown" class="dropdown-toggle">About Us</a>
+                                        <a href="about.php" data-hover="dropdown" class="nav-links dropdown-toggle" style="color: white">About Us</a>
                                     </li>                            
                                     <li class=" dropdown ">
-                                        <a href="contact.php" data-hover="dropdown" class="dropdown-toggle">Contact US</a>
+                                        <a href="contact.php" data-hover="dropdown" class="nav-links dropdown-toggle" style="color: white">Contact US</a>
                                     </li>                            
                                     <li class=" dropdown ">
-                                        <a href="privacy.php" data-hover="dropdown" class="dropdown-toggle">Privacy Policy</a>
+                                        <a href="privacy.php" data-hover="dropdown" class="nav-links dropdown-toggle" style="color: white">Privacy Policy</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>

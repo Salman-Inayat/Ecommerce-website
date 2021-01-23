@@ -92,7 +92,7 @@ while ($row=mysqli_fetch_array($ret))
                                                                 <a
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
                                                                     <img src="<?php echo htmlentities($row['productImage1']);?>"
-                                                                        width="180" height="300" alt=""></a>
+                                                                        width="220" height="300" alt=""></a>
                                                             </div>
                                                         </div>
                                                         <div class="product-info text-left">
@@ -116,9 +116,9 @@ while ($row=mysqli_fetch_array($ret))
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action"><a
                                                                 href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
-                                                                class="lnk btn btn-primary"><span><i
+                                                                class="icon-button btn btn-primary"><span><i
                                                                         class="glyphicon glyphicon-shopping-cart"></i></span></a>
-                                                            <a class="btn btn-primary" data-toggle="tooltip"
+                                                            <a class="icon-button btn btn-primary" data-toggle="tooltip"
                                                                 data-placement="right" title="Wishlist"
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist">
                                                                 <i class="fa fa-heart"></i>
@@ -159,8 +159,6 @@ while ($row=mysqli_fetch_array($ret))
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a>
                                                             </h3>
                                                             <?php include('includes/rating.php');?>
-                                                            <div class="description"></div>
-
                                                             <div class="product-price">
                                                                 <span class="price">
                                                                     Rs. <?php echo htmlentities($row['productPrice']);?>
@@ -174,9 +172,9 @@ while ($row=mysqli_fetch_array($ret))
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action"><a
                                                                 href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
-                                                                class="lnk btn btn-primary">Add to Cart</a></div>
+                                                                class="icon-button  btn btn-primary">Add to Cart</a></div>
                                                         <?php } else {?>
-                                                        <div class="action" style="color:red">Out of Stock</div>
+                                                        <div class="action">Out of Stock</div>
                                                         <?php } ?>
                                                     </div><!-- /.product -->
 
@@ -227,9 +225,9 @@ while ($row=mysqli_fetch_array($ret))
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action"><a
                                                                 href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
-                                                                class="lnk btn btn-primary"><span><i
+                                                                class="icon-button  btn btn-primary"><span><i
                                                                         class="glyphicon glyphicon-shopping-cart"></i></span></a>
-                                                            <a class="btn btn-primary" data-toggle="tooltip"
+                                                            <a class="icon-button btn btn-primary" data-toggle="tooltip"
                                                                 data-placement="right" title="Wishlist"
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist">
                                                                 <i class="fa fa-heart"></i>
@@ -289,11 +287,11 @@ while ($row=mysqli_fetch_array($ret)) {?>
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action">
                                                             <a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
-                                                                class="lnk btn btn-primary" style="margin-right: 30px">
+                                                                class="icon-button  btn btn-primary">
                                                                 <span><i
                                                                         class="glyphicon glyphicon-shopping-cart"></i></span>
                                                             </a>
-                                                            <a class="btn btn-primary" data-toggle="tooltip"
+                                                            <a class="icon-button btn btn-primary" data-toggle="tooltip"
                                                                 data-placement="right" title="Wishlist"
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist">
                                                                 <i class="fa fa-heart"></i>
@@ -353,11 +351,11 @@ while ($row=mysqli_fetch_array($ret))
                                                         <?php if($row['productAvailability']=='In Stock'){?>
                                                         <div class="action">
                                                             <a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
-                                                                class="lnk btn btn-primary" style="margin-right: 30px">
+                                                                class="icon-button  btn btn-primary" >
                                                                 <span><i
                                                                         class="glyphicon glyphicon-shopping-cart"></i></span>
                                                             </a>
-                                                            <a class="btn btn-primary" data-toggle="tooltip"
+                                                            <a class="icon-button btn btn-primary" data-toggle="tooltip"
                                                                 data-placement="right" title="Wishlist"
                                                                 href="product-details.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist">
                                                                 <i class="fa fa-heart"></i>
@@ -416,12 +414,12 @@ while ($row=mysqli_fetch_array($ret))
                                                             <?php if($row['productAvailability']=='In Stock'){?>
                                                             <div class="action">
                                                                 <a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
-                                                                    class="lnk btn btn-primary btn-lg"
-                                                                    style="margin-right: 30px">
+                                                                    class=" btn btn-primary"
+                                                                    >
                                                                     <span><i
                                                                             class="glyphicon glyphicon-shopping-cart"></i></span>
                                                                 </a>
-                                                                <a class="btn btn-primary" data-toggle="tooltip"
+                                                                <a class=" btn btn-primary" data-toggle="tooltip"
                                                                     data-placement="right" title="Wishlist"
                                                                     href="product-details.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist">
                                                                     <i class="fa fa-heart"></i>

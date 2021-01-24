@@ -7,8 +7,7 @@
                         <div class="footer-logo">
                             <div class="logo">
                                 <a href="index.php">
-
-                                    <h3>Atec Mart</h3>
+                                    <h3 style="color: white">Atec Mart</h3>
                                 </a>
                             </div><!-- /.logo -->
                         </div>

@@ -99,14 +99,14 @@ exit();
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <script type="text/javascript">
-    function valid() {
-        if (document.register.password.value != document.register.confirmpassword.value) {
-            alert("Password and Confirm Password Field do not match  !!");
-            document.register.confirmpassword.focus();
-            return false;
-        }
-        return true;
-    }
+    // function valid() {
+    //     if (document.register.password.value != document.register.confirmpassword.value) {
+    //         alert("Password and Confirm Password Field do not match  !!");
+    //         document.register.confirmpassword.focus();
+    //         return false;
+    //     }
+    //     return true;
+    // }
     </script>
     <script>
     function userAvailability() {
@@ -144,8 +144,8 @@ exit();
                         <h4 class="">sign in</h4>
                         <form class="register-form outer-top-xs" method="post">
                             <span style="color:red;">
-                                <?php echo htmlentities($_SESSION['errmsg']); ?>
-                                <?php echo htmlentities($_SESSION['errmsg']=""); ?>
+                                <?php echo ($_SESSION['errmsg']); ?>
+                                <?php echo ($_SESSION['errmsg']=""); ?>
                             </span>
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
@@ -187,12 +187,12 @@ exit();
                                 <input type="password" class="form-control unicase-form-control text-input"
                                     id="password" name="password" required>
                             </div>
-
+<!-- 
                             <div class="form-group">
                                 <label class="info-title" for="confirmpassword">Confirm Password. <span>*</span></label>
                                 <input type="password" class="form-control unicase-form-control text-input"
                                     id="confirmpassword" name="confirmpassword" required>
-                            </div>
+                            </div> -->
 
 
                             <button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button"

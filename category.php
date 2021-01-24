@@ -93,51 +93,6 @@ header('location:my-wishlist.php');
                     <!-- ================================== TOP NAVIGATION ================================== -->
                     <?php include('includes/side-menu.php');?>
                     <?php include('includes/side-subcategory.php');?>
-                    <!-- <div class="side-menu animate-dropdown outer-bottom-xs">
-                        <div class="side-menu animate-dropdown outer-bottom-xs">
-                            <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categories</div>
-                            <nav class="yamm megamenu-horizontal" role="navigation">
-                                <ul class="nav">
-                                    <li class="dropdown menu-item">
-                                        <?php $sql=mysqli_query($con,"select id,subcategory  from subcategory where categoryid='$cid'");
-while($row=mysqli_fetch_array($sql)){?>
-                                        <a href="sub-category.php?scid=<?php echo $row['id'];?>"
-                                            class="dropdown-toggle">
-                                            <?php echo $row['subcategory'];?></a>
-                                        <?php }?>
-
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div> -->
-                    <!-- ================================== TOP NAVIGATION : END ================================== -->
-                    <!-- <div class="sidebar-module-container">
-                        <h3 class="section-title">shop by</h3>
-                        <div class="sidebar-filter">
-                            <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
-                                <div class="widget-header m-t-20">
-                                    <h4 class="widget-title">Category</h4>
-                                </div>
-                                <div class="sidebar-widget-body m-t-10">
-                                    <?php $sql=mysqli_query($con,"select id,categoryName  from category");
-while($row=mysqli_fetch_array($sql)){?>
-                                    <div class="accordion">
-                                        <div class="accordion-group">
-                                            <div class="accordion-heading">
-                                                <a href="category.php?cid=<?php echo $row['id'];?>"
-                                                    class="accordion-toggle collapsed">
-                                                    <?php echo $row['categoryName'];?>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    
                 </div>
                 <div class='col-md-9'>
                     <div class="search-result-container">
@@ -156,8 +111,8 @@ while ($row=mysqli_fetch_array($ret)) {?>
                                                     <div class="product-image">
                                                         <div class="image">
                                                             <a
-                                                                href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img
-                                                                    src="<?php echo htmlentities($row['productImage1']);?>"
+                                                                href="product-details.php?pid=<?php echo ($row['id']);?>"><img
+                                                                    src="<?php echo ($row['productImage1']);?>"
                                                                     alt="" width="200" height="300"></a>
                                                         </div><!-- /.image -->
                                                     </div><!-- /.product-image -->
@@ -165,17 +120,17 @@ while ($row=mysqli_fetch_array($ret)) {?>
 
                                                     <div class="product-info text-left">
                                                         <h3 class="name"><a
-                                                                href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a>
+                                                                href="product-details.php?pid=<?php echo ($row['id']);?>"><?php echo ($row['productName']);?></a>
                                                         </h3>
                                                         <?php include('includes/rating.php');?>
                                                         <div class="description"></div>
 
                                                         <div class="product-price">
                                                             <span class="price">
-                                                                Rs. <?php echo htmlentities($row['productPrice']);?>
+                                                                Rs. <?php echo ($row['productPrice']);?>
                                                             </span>
                                                             <span class="price-before-discount">Rs.
-                                                                <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+                                                                <?php echo ($row['productPriceBeforeDiscount']);?></span>
 
                                                         </div><!-- /.product-price -->
 
@@ -198,7 +153,7 @@ while ($row=mysqli_fetch_array($ret)) {?>
 
                                                                 <li class="lnk wishlist">
                                                                     <a class="add-to-cart"
-                                                                        href="category.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist"
+                                                                        href="category.php?pid=<?php echo ($row['id'])?>&&action=wishlist"
                                                                         title="Wishlist">
                                                                         <i class="icon fa fa-heart"></i>
                                                                     </a>

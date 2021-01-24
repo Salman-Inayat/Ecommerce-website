@@ -88,7 +88,7 @@ header('location:my-wishlist.php');
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th colspan="4">my wishlist</th>
+                                        <th colspan="4">My Wishlist</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -100,12 +100,12 @@ $num=mysqli_num_rows($ret);
 while ($row=mysqli_fetch_array($ret)) {?>
                                     <tr>
                                         <td class="col-md-2">
-                                            <img src="admin/productimages/<?php echo htmlentities($row['pid']);?>/<?php echo htmlentities($row['pimage']);?>"
-                                                alt="<?php echo htmlentities($row['pname']);?>" width="60" height="100">
+                                            <img src="<?php echo ($row['pimage']);?>"
+                                                alt="<?php echo ($row['pname']);?>" width="60" height="100">
                                         </td>
                                         <td class="col-md-6">
                                             <div class="product-name"><a
-                                                    href="product-details.php?pid=<?php echo htmlentities($pd=$row['pid']);?>"><?php echo htmlentities($row['pname']);?></a>
+                                                    href="product-details.php?pid=<?php echo ($pd=$row['pid']);?>"><?php echo ($row['pname']);?></a>
                                             </div>
                                             <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");
 $num=mysqli_num_rows($rt);{?>
@@ -115,11 +115,11 @@ $num=mysqli_num_rows($rt);{?>
                                                 <i class="fa fa-star rate"></i>
                                                 <i class="fa fa-star rate"></i>
                                                 <i class="fa fa-star non-rate"></i>
-                                                <span class="review">( <?php echo htmlentities($num);?> Reviews )</span>
+                                                <span class="review">( <?php echo ($num);?> Reviews )</span>
                                             </div>
                                             <?php } ?>
                                             <div class="price">Rs.
-                                                <?php echo htmlentities($row['pprice']);?>.00
+                                                <?php echo ($row['pprice']);?>.00
                                                 <span>$900.00</span>
                                             </div>
                                         </td>
@@ -128,7 +128,7 @@ $num=mysqli_num_rows($rt);{?>
                                                 class="btn-upper btn btn-primary">Add to cart</a>
                                         </td>
                                         <td class="col-md-2 close-btn">
-                                            <a href="my-wishlist.php?del=<?php echo htmlentities($row['wid']);?>"
+                                            <a href="my-wishlist.php?del=<?php echo ($row['wid']);?>"
                                                 onClick="return" class=""><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>

@@ -17,27 +17,22 @@ include('includes/config.php');
     <meta name="robots" content="all">
 
     <title>Contact Us</title>
-
-    <!-- Bootstrap Core CSS -->
+    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Customizable CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link href="assets/css/lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-
-    <!-- <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color"> -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/d34e22b7c9.js" crossorigin="anonymous"></script>
 </head>
+
+<style>
+    .header, .bigicon{
+        color: #f44336;
+    }
+</style>
 
 <body>
     <header class="header-style-1">
-        <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
     <div class="container" style="margin-top: 50px">
@@ -49,7 +44,6 @@ include('includes/config.php');
                     <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend class="text-center header">Contact us</legend>
-
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i
                                         class="fa fa-user bigicon"></i></span>
@@ -113,9 +107,7 @@ include('includes/config.php');
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
-
 </html>

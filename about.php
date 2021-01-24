@@ -18,19 +18,11 @@ include('includes/config.php');
 
     <title>About Us</title>
 
-    <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Customizable CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-
-    <!-- <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color"> -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/d34e22b7c9.js" crossorigin="anonymous"></script>
 </head>
 <style>
     .aboutus_logo {
@@ -56,7 +48,6 @@ include('includes/config.php');
         margin: 20px;
     }
 
-
     @media (max-width: 767px) {
         .aboutus_logo {
             font-size: 100px;
@@ -78,7 +69,6 @@ include('includes/config.php');
 
 <body>
     <header class="header-style-1">
-        <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
     <div class='container'>

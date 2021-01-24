@@ -26,21 +26,9 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     else
     {
     mysqli_query($con,"insert into wishlist(userId,productId) values('".$_SESSION['id']."','$pid')");
-    echo "<script>alert('Product aaded in wishlist');</script>";
     header('location:my-wishlist.php');
     }
 }
-// if(isset($_POST['submit']))
-// {
-// 	$qty=$_POST['quality'];
-// 	$price=$_POST['price'];
-// 	$value=$_POST['value'];
-// 	$name=$_POST['name'];
-// 	$summary=$_POST['summary'];
-// 	$review=$_POST['review'];
-// 	mysqli_query($con,"insert into productreviews(productId,quality,price,value,name,summary,review) values('$pid','$qty','$price','$value','$name','$summary','$review')");
-// }
-
 
 ?>
 <!DOCTYPE html>
@@ -54,28 +42,22 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <meta name="author" content="">
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
+    
     <title>Product Details</title>
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/green.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.transitions.css">
-    <link href="assets/css/lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-    <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/d34e22b7c9.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="cnt-home">
 
     <header class="header-style-1">
-        <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
     <div class="body-content outer-top-xs">
@@ -90,7 +72,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 $ret=mysqli_query($con,"select * from products where id='$pid'");
 while($row=mysqli_fetch_array($ret)){?>
                 <div class='col-md-9'>
-                    <div class="row  wow fadeInUp">
+                    <div class="row  ">
                         <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
                             <div class="product-item-holder size-big single-product-gallery small-gallery">
                                 <div id="owl-single-product">
@@ -116,11 +98,6 @@ $num=mysqli_num_rows($rt);
                                         <div class="col-sm-4">
                                             <?php include('includes/rating.php');?>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="reviews">
-                                                <a href="#" class="lnk">(<?php echo ($num);?> Reviews)</a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <?php } ?>
@@ -137,9 +114,8 @@ $num=mysqli_num_rows($rt);
                                                     class="value"><?php echo ($row['productAvailability']);?></span>
                                             </div>
                                         </div>
-                                    </div><!-- /.row -->
+                                    </div>
                                 </div>
-
                                 <div class="stock-container info-container m-t-10">
                                     <div class="row">
                                         <div class="col-xs-5">
@@ -153,28 +129,22 @@ $num=mysqli_num_rows($rt);
                                                     class="value"><?php echo ($row['productCompany']);?></span>
                                             </div>
                                         </div>
-                                    </div><!-- /.row -->
+                                    </div>
                                 </div>
-
                                 <div class="price-container info-container m-t-20">
                                     <div class="row">
-
-
                                         <div class="col-sm-6">
                                             <div class="price-box">
                                                 <span class="price">Rs.
                                                     <?php echo ($row['productPrice']);?></span>
                                             </div>
                                         </div>
-
                                         <div class="col-sm-6">
                                             <div class="favorite-button m-t-10">
                                                 <a class="btn btn-primary" data-toggle="tooltip" data-placement="right"
                                                     title="Wishlist"
                                                     href="product-details.php?pid=<?php echo ($row['id'])?>&&action=wishlist">
                                                     <i class="fa fa-heart"></i>
-                                                </a>
-
                                                 </a>
                                             </div>
                                         </div>
@@ -196,7 +166,7 @@ $num=mysqli_num_rows($rt);
                             </div>
                         </div>
                     </div>
-                    <div class="product-tabs inner-bottom-xs  wow fadeInUp">
+                    <div class="product-tabs inner-bottom-xs  ">
                         <div class="row">
                             <div class="col-md-5 col-sm-12">  
                             </div>
@@ -209,9 +179,9 @@ $num=mysqli_num_rows($rt);
                 </div>
             </div>
             <?php $cid=$row['category'];
-			$subcid=$row['subCategory']; } ?>
-            <!-- ============================================== UPSELL PRODUCTS ============================================== -->
-            <section class="section featured-product wow fadeInUp">
+            $subcid=$row['subCategory']; } ?>
+            
+            <section class="section featured-product ">
                 <h3 class="section-title">Realted Products </h3>
                 <div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
                     <?php 
@@ -223,17 +193,15 @@ while($rw=mysqli_fetch_array($qry)){?>
                                 <div class="product-image">
                                     <div class="image">
                                         <a href="product-details.php?pid=<?php echo ($rw['id']);?>"><img
-                                                src="<?php echo ($rw['productImage1']);?>" width="150"
+                                                src="<?php echo ($rw['productImage1']);?>" width="180"
                                                 height="240" alt=""></a>
-                                    </div><!-- /.image -->
-                                </div><!-- /.product-image -->
+                                    </div>
+                                </div>
                                 <div class="product-info text-left">
                                     <h3 class="name"><a
                                             href="product-details.php?pid=<?php echo ($rw['id']);?>"><?php echo ($rw['productName']);?></a>
                                     </h3>
                                     <?php include('includes/rating.php');?>
-                                    <div class="description"></div>
-
                                     <div class="product-price">
                                         <span class="price">
                                             Rs.<?php echo ($rw['productPrice']);?> </span>
@@ -250,14 +218,14 @@ while($rw=mysqli_fetch_array($qry)){?>
                                             </li>
                                         </ul>
                                     </div>
-                                </div><!-- /.cart -->
-                            </div><!-- /.product -->
-                        </div><!-- /.products -->
-                    </div><!-- /.item -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php } ?>
-                </div><!-- /.home-owl-carousel -->
-            </section><!-- /.section -->
-        </div><!-- /.col -->
+                </div>
+            </section>
+        </div>
         <div class="clearfix"></div>
     </div>
     </div>
@@ -265,19 +233,8 @@ while($rw=mysqli_fetch_array($qry)){?>
     <?php include('includes/footer.php');?>
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
-
     <script src="assets/js/bootstrap.min.js"></script>
-
-    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-
-    <script src="assets/js/echo.min.js"></script>
-    <script src="assets/js/jquery.easing-1.3.min.js"></script>
-    <script src="assets/js/bootstrap-slider.min.js"></script>
-    <script src="assets/js/jquery.rateit.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
-
 </html>

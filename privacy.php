@@ -18,26 +18,14 @@ include('includes/config.php');
 
     <title>Privacy Policy</title>
 
-    <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Customizable CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link href="assets/css/lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-
-    <!-- <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color"> -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
 </head>
 
 <body>
     <header class="header-style-1">
-        <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
     <div class='container' style="margin-top: 50px; margin-bottom: 50px">

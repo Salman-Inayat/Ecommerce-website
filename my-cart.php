@@ -13,8 +13,8 @@ if(isset($_POST['submit'])){
 		}
 		}
 	}
-// Code for Remove a Product from Cart
-if(isset($_POST['remove_code']))
+
+    if(isset($_POST['remove_code']))
 	{
 if(!empty($_SESSION['cart'])){
 		foreach($_POST['remove_code'] as $key){
@@ -28,7 +28,6 @@ if(!empty($_SESSION['cart'])){
 <html lang="en">
 
 <head>
-    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -40,25 +39,16 @@ if(!empty($_SESSION['cart'])){
     <title>My Cart</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/green.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.transitions.css">
-    <!--<link rel="stylesheet" href="assets/css/owl.theme.css">-->
-    <link href="assets/css/lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-
+    <script src="https://kit.fontawesome.com/d34e22b7c9.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="cnt-home">
     <header class="header-style-1">
-        <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
     </header>
     <div class="body-content outer-top-xs">
@@ -79,7 +69,7 @@ if(!empty($_SESSION['cart'])){
                                             <th class="cart-product-name item">Product Name</th>
                                             <th class="cart-sub-total item">Price Per unit</th>
                                         </tr>
-                                    </thead><!-- /thead -->
+                                    </thead>
                                     <tfoot>
                                         <tr>
                                             <td colspan="7">
@@ -91,7 +81,7 @@ if(!empty($_SESSION['cart'])){
                                                         <input type="submit" name="submit" value="Update shopping cart"
                                                             class="btn btn-upper btn-primary pull-right outer-right-xs">
                                                     </span>
-                                                </div><!-- /.shopping-cart-btn -->
+                                                </div>
                                             </td>
                                         </tr>
                                     </tfoot>
@@ -115,16 +105,14 @@ if(!empty($_SESSION['cart'])){
                                                     value="<?php echo ($row['id']);?>" /></td>
                                             <td class="cart-image">
                                                 <a class="entry-thumbnail" href="detail.html">
-                                                    <img src="<?php echo $row['productImage1'];?>"
-                                                        alt="" width="114" height="146">
+                                                    <img src="<?php echo $row['productImage1'];?>" alt="" width="114"
+                                                        height="146">
                                                 </a>
                                             </td>
                                             <td class="cart-product-name-info">
-                                                <h4 class='cart-product-description'><a
-                                                        href="product-details.php?pid=<?php echo ($pd=$row['id']);?>"><?php echo $row['productName'];
-
-$_SESSION['sid']=$pd;
-						 ?></a></h4>
+                                                <h4 class='cart-product-description'>
+                                                    <a href="product-details.php?pid=<?php echo ($pd=$row['id']);?>"><?php echo $row['productName']; $_SESSION['sid']=$pd;  ?></a>
+                                                </h4>
                                                 <div class="row">
                                                     <div class="col-sm-4">
                                                         <?php include('includes/rating.php');?>
@@ -132,12 +120,9 @@ $_SESSION['sid']=$pd;
                                                     <div class="col-sm-8">
                                                         <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");
 $num=mysqli_num_rows($rt);{?>
-                                                        <div class="reviews">
-                                                            ( <?php echo ($num);?> Reviews )
-                                                        </div>
                                                         <?php } ?>
                                                     </div>
-                                                </div><!-- /.row -->
+                                                </div>
                                             </td>
                                             <td class="cart-product-sub-total"><span
                                                     class="cart-sub-total-price"><?php echo "Rs"." ".$row['productPrice']; ?>.00</span>
@@ -145,10 +130,10 @@ $num=mysqli_num_rows($rt);{?>
                                         </tr>
                                         <?php } }
 $_SESSION['pid']=$pdtid;?>
-                                    </tbody><!-- /tbody -->
-                                </table><!-- /table -->
+                                    </tbody>
+                                </table>
                         </div>
-                    </div><!-- /.shopping-cart-table -->
+                    </div>
                     <?php } else {
 echo "Your shopping Cart is empty";}?>
                 </div>
@@ -161,9 +146,7 @@ echo "Your shopping Cart is empty";}?>
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
-
 </html>

@@ -80,39 +80,14 @@ exit();
     <link rel="stylesheet" href="assets/css/green.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.transitions.css">
-    <!--<link rel="stylesheet" href="assets/css/owl.theme.css">-->
-    <link href="assets/css/lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-
-
-    <link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
-    <!-- Demo Purpose Only. Should be removed in production : END -->
-
-
-    <!-- Icons/Glyphs -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/d34e22b7c9.js" crossorigin="anonymous"></script>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
     <script type="text/javascript">
-    // function valid() {
-    //     if (document.register.password.value != document.register.confirmpassword.value) {
-    //         alert("Password and Confirm Password Field do not match  !!");
-    //         document.register.confirmpassword.focus();
-    //         return false;
-    //     }
-    //     return true;
-    // }
-    </script>
-    <script>
     function userAvailability() {
         $("#loaderIcon").show();
         jQuery.ajax({
-            url: "check_availability.php",
+            url: "email_availability.php",
             data: 'email=' + $("#email").val(),
             type: "POST",
             success: function(data) {
@@ -123,14 +98,10 @@ exit();
         });
     }
     </script>
-
-
-
 </head>
 
 <body class="cnt-home">
     <header class="header-style-1">
-        <?php include('includes/top-header.php');?>
         <?php include('includes/main-header.php');?>
 
     </header>
@@ -139,14 +110,9 @@ exit();
         <div class="container">
             <div class="sign-in-page inner-bottom-sm">
                 <div class="row">
-                    <!-- Sign-in -->
                     <div class="col-md-6 col-sm-6 sign-in">
-                        <h4 class="">sign in</h4>
+                        <h4 class="">Sign in</h4>
                         <form class="register-form outer-top-xs" method="post">
-                            <span style="color:red;">
-                                <?php echo ($_SESSION['errmsg']); ?>
-                                <?php echo ($_SESSION['errmsg']=""); ?>
-                            </span>
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
                                 <input type="email" name="email" class="form-control unicase-form-control text-input"
@@ -161,9 +127,7 @@ exit();
                                 name="login">Login</button>
                         </form>
                     </div>
-                    <!-- Sign-in -->
 
-                    <!-- create a new account -->
                     <div class="col-md-6 col-sm-6 create-new-account">
                         <h4 class="checkout-subtitle">create new account</h4>
                         <form class="register-form outer-top-xs" role="form" method="post" name="register"
@@ -173,70 +137,31 @@ exit();
                                 <input type="text" class="form-control unicase-form-control text-input" id="fullname"
                                     name="fullname" required="required">
                             </div>
-
-
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
                                 <input type="email" class="form-control unicase-form-control text-input" id="email"
                                     onBlur="userAvailability()" name="emailid" required>
                                 <span id="user-availability-status1" style="font-size:12px;"></span>
                             </div>
-
                             <div class="form-group">
                                 <label class="info-title" for="password">Password. <span>*</span></label>
                                 <input type="password" class="form-control unicase-form-control text-input"
                                     id="password" name="password" required>
                             </div>
-<!-- 
-                            <div class="form-group">
-                                <label class="info-title" for="confirmpassword">Confirm Password. <span>*</span></label>
-                                <input type="password" class="form-control unicase-form-control text-input"
-                                    id="confirmpassword" name="confirmpassword" required>
-                            </div> -->
-
-
                             <button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button"
                                 id="submit">Sign Up</button>
                         </form>
                     </div>
-                    <!-- create a new account -->
-                </div><!-- /.row -->
+                </div>
             </div>
         </div>
     </div>
     <?php include('includes/footer.php');?>
+
     <script src="assets/js/jquery-1.11.1.min.js"></script>
-
     <script src="assets/js/bootstrap.min.js"></script>
-
-    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/bootstrap-slider.min.js"></script>
     <script src="assets/js/scripts.js"></script>
-
-    <!-- For demo purposes – can be removed on production -->
-
-    <script src="switchstylesheet/switchstylesheet.js"></script>
-
-    <script>
-    $(document).ready(function() {
-        $(".changecolor").switchstylesheet({
-            seperator: "color"
-        });
-        $('.show-theme-options').click(function() {
-            $(this).parent().toggleClass('open');
-            return false;
-        });
-    });
-
-    $(window).bind("load", function() {
-        $('.show-theme-options').delay(2000).trigger('click');
-    });
-    </script>
-    <!-- For demo purposes – can be removed on production : End -->
-
-
-
 </body>
 
 </html>

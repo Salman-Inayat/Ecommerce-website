@@ -17,7 +17,7 @@
     color: red;
 }
 </style>
-
+<?php include('includes/top-header.php');?>
 <div class="main-header" style="background-color: #f44336">
     <div class="container">
         <div class="row" >
@@ -75,8 +75,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-1 animate-dropdown top-cart-row">
                 <?php
-if(!empty($_SESSION['cart'])){
-	?>
+if(!empty($_SESSION['cart'])){?>
                 <div class="dropdown dropdown-cart">
                     <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
                         <div class="items-cart-inner">
@@ -126,7 +125,6 @@ if(!empty($_SESSION['cart'])){
                                 <i class="glyphicon glyphicon-shopping-cart"></i>
                             </div>
                             <div class="basket-item-count"><span class="count">0</span></div>
-
                         </div>
                     </a>
                     <ul class="dropdown-menu">
@@ -138,14 +136,6 @@ if(!empty($_SESSION['cart'])){
                                     </div>
                                 </div>
                             </div>
-                            <!-- <hr>
-                            <div class="clearfix cart-total">
-
-                                <div class="clearfix"></div>
-
-                                <a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue
-                                    Shopping</a>
-                            </div> -->
                         </li>
                     </ul>
                 </div>

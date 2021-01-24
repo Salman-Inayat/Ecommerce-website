@@ -93,7 +93,7 @@ while($row=mysqli_fetch_array($ret)){?>
                                 <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pid'");
 $num=mysqli_num_rows($rt);
 {?>
-                                <div class="rating-reviews m-t-20">
+                                <div class=" m-t-20">
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <?php include('includes/rating.php');?>

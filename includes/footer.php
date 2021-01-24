@@ -1,5 +1,5 @@
-<footer id="footer" class="footer color-bg" style="background-color: #f44336;">
-    <div class="links-social inner-top-sm">
+<footer id="footer" class="footer color-bg" style="background-color: #f44336; color: white; padding-bottom: 50px">
+    <div class="inner-top-sm">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4">
@@ -7,49 +7,49 @@
                         <div class="footer-logo">
                             <div class="logo">
                                 <a href="index.php">
-                                    <h3 style="color: white">Atec Mart</h3>
+                                    <h3 style="color: white ; margin-top: 5px">Atec Mart</h3>
                                 </a>
                             </div>
                         </div>
                         <div class="module-body m-t-20">
-                            <p class="about-us"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                            <p class="about-us" style="letter-spacing: 1px; font-weight: 300;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
                                 scelerisque diam et orci mattis accumsan. Vestibulum consequat dolor non tellus cursus
                                 maximus. Donec euismod faucibus dolor, et scelerisque nulla pharetra bibendum. Quisque
+                                porttitor, leo eu commodo placerat et scelerisque nulla pharetra bibendum. Quisque
                                 porttitor, leo eu commodo placerat</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="contact-timing">
+                <div class="col-xs-12 col-sm-6 col-md-4" style="display: flex; ">
+                    <div class="contact-timing" >
                         <div class="module-heading">
-                            <h4 class="module-title" style="color: white">opening time</h4>
+                            <h4 class="module-title" style="color: white">Site links</h4>
                         </div>
-                        <div class="module-body outer-top-xs">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Monday-Friday:</td>
-                                            <td class="pull-right">08.00 To 18.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Saturday:</td>
-                                            <td class="pull-right">09.00 To 20.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sunday:</td>
-                                            <td class="pull-right">10.00 To 20.00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class=" module-body outer-top-xs">
+                            <ul>
+                                <li style="margin: 20px 0px">
+                                    <a href="#" style="color: white; "><h5 style="font-weight: 400;">Brands</h5></a>
+                                </li>
+                                <li style="margin: 20px 0px">
+                                    <a href="#" style="color: white"><h5 style="font-weight: 400;">Store Locations</h5></a>
+                                </li>
+                                <li style="margin: 20px 0px">
+                                    <a href="#" style="color: white"><h5 style="font-weight: 400;">Categories</h5></a>
+                                </li>
+                                <li style="margin: 20px 0px">
+                                    <a href="about.php" style="color: white"><h5 style="font-weight: 400;">About Us</h5></a>
+                                </li>
+                                <li style="margin: 20px 0px">
+                                    <a href="privacy.php" style="color: white"><h5 style="font-weight: 400;">Privacy Policy</h5></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="contact-information">
                         <div class="module-heading">
-                            <h4 class="module-title" style="color: white">information</h4>
+                            <h4 class="module-title" style="color: white">Contact</h4>
                         </div>
                         <div class="module-body outer-top-xs">
                             <ul class="toggle-footer" style="">

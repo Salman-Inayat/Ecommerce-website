@@ -4117,21 +4117,6 @@ a {
   right: 25px;
   text-align: center;
 }
-.wrapper .box .wrapper-inner .wrapper-body-inner .owl-item .tag span {
-  position: relative;
-  z-index: 100;
-}
-.wrapper .box .wrapper-inner .wrapper-body-inner .owl-item .tag.new {
-  background: #46aad7;
-}
-.wrapper .box .wrapper-inner .wrapper-body-inner .owl-item .tag.sale {
-  background: #989898;
-}
-.wrapper .box .wrapper-inner .wrapper-body-inner .owl-item .tag.hot {
-  background: #ff7878;
-}
-
-
 
 
 /*===================================================================================*/

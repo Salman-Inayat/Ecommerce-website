@@ -26,7 +26,7 @@ include('includes/config.php');
 
 <body>
     <header class="header-style-1">
-        <?php include('includes/main-header.php');?>
+        <?php include('includes/header.php');?>
     </header>
     <div class='container' style="margin-top: 50px; margin-bottom: 50px">
         <div class="row">

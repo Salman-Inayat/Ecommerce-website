@@ -63,7 +63,7 @@ header('location:my-wishlist.php');
 <body class="cnt-home">
 
     <header class="header-style-1">
-        <?php include('includes/main-header.php');?>
+        <?php include('includes/header.php');?>
     </header>
     <div class="body-content outer-top-xs">
         <div class='container'>

@@ -45,7 +45,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 
 <body class="cnt-home">
     <header class="header-style-1">
-        <?php include('includes/main-header.php');?>
+        <?php include('includes/header.php');?>
     </header>
     <div class="body-content outer-top-xs" id="top-banner-and-menu">
         <div class="container">

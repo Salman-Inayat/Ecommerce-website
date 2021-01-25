@@ -28,6 +28,7 @@ include('includes/config.php');
     .aboutus_logo {
         font-size: 200px;
         margin: 20px auto;
+        color: #f44336;
     }
 
     .aboutus_row {
@@ -51,7 +52,7 @@ include('includes/config.php');
     @media (max-width: 767px) {
         .aboutus_logo {
             font-size: 100px;
-            margin: 10% 28%
+            margin: 10% 28%;
         }
 
         .aboutus_row {
@@ -69,7 +70,7 @@ include('includes/config.php');
 
 <body>
     <header class="header-style-1">
-        <?php include('includes/main-header.php');?>
+        <?php include('includes/header.php');?>
     </header>
     <div class='container'>
         <div class="row aboutus_row">
